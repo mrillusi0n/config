@@ -65,7 +65,7 @@ let g:gruvbox_contrast_dark = 'hard'
 " seoul256
 let g:seoul256_background = 233
 
-colorscheme gruvbox
+colorscheme onedark
 
 " crt specific setting
 highlight Normal ctermbg=black
