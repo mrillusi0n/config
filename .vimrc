@@ -54,7 +54,6 @@ set autoindent
 filetype plugin indent on
 syntax on
 
-set showmatch
 
 " setting colorschemes
 set termguicolors
