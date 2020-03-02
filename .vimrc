@@ -99,3 +99,10 @@ nnoremap <silent> <leader>h <C-w>h
 nnoremap <silent> <leader>j <C-w>j
 nnoremap <silent> <leader>k <C-w>k
 nnoremap <silent> <leader>l <C-w>l
+
+" open a terminal at the bottom
+nnoremap <silent> <leader>4 :term<CR><C-w><C-r><C-w>4-
+
+" enable project specific vimrc
+set exrc
+set secure
