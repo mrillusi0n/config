@@ -35,13 +35,14 @@ set ignorecase
 " markdown
 let vim_markdown_preview_github=1
 
+" airline settings
 " set noshowmode
 " let g:airline_powerline_fonts = 1
 " let g:airline_section_error = ''
 " let g:airline_section_warning = ''
 " let g:airline_section_y = ''
 " let g:airline_section_c = ''
-" 
+ 
 set ruler
 set tabstop=4
 set shiftwidth=4
@@ -87,7 +88,10 @@ autocmd FileType python nnoremap <silent> <C-z> :w<CR>:!clear && bpython -i %<CR
 " rust
 let g:rustfmt_autosave = 1
 let g:rust_clip_command = 'pbcopy'
+autocmd FileType rust nnoremap <silent> <F9> :RustRun<CR>
 
+" c
+autocmd FileType c nnoremap <silent> <F9> :w<CR> :!clear && clang -o %:r % && ./%:r<CR>
 
 nnoremap <silent> <leader>g :set hlsearch!<CR>
 nnoremap <silent> <leader>r :set relativenumber!<CR>
@@ -100,8 +104,9 @@ nnoremap <silent> <leader>j <C-w>j
 nnoremap <silent> <leader>k <C-w>k
 nnoremap <silent> <leader>l <C-w>l
 
-" open a terminal at the bottom
-nnoremap <silent> <leader>4 :bel term<CR><C-w>4-
+" open terminal at the bottom
+set termwinsize=8x0
+nnoremap <silent> <leader>4 :bel term<CR>
 
 " enable project specific vimrc
 set exrc
