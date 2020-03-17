@@ -101,6 +101,10 @@ nnoremap <silent> <leader>n :set relativenumber!<CR>
 vnoremap <silent> <leader>c :w !pbcopy<CR><CR>
 vnoremap <silent> <leader>p :r !pbpaste<CR><CR>
 
+" moving blocks of text
+vnoremap <S-j> :m +1<CR>gv
+vnoremap <S-k> :m -2<CR>gv
+
 " split window
 nnoremap <silent> <leader>h <C-w>h
 nnoremap <silent> <leader>j <C-w>j
