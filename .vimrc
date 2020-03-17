@@ -68,6 +68,7 @@ let g:seoul256_background = 233
 colorscheme onedark
 
 " crt specific setting
+" sets background to absolute black
 highlight Normal ctermbg=black
 
 
@@ -82,19 +83,21 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 nnoremap <Space> @q
 
 " python
-autocmd FileType python nnoremap <silent> <F9> :w<CR>:!clear && python3 %<CR>
-autocmd FileType python nnoremap <silent> <C-z> :w<CR>:!clear && bpython -i %<CR>
+autocmd FileType python nnoremap <silent> <leader>r :w<CR>:!clear && python3 %<CR>
+autocmd FileType python nnoremap <silent> <leader>i :w<CR>:!clear && bpython -q -i %<CR>
 
 " rust
 let g:rustfmt_autosave = 1
 let g:rust_clip_command = 'pbcopy'
-autocmd FileType rust nnoremap <silent> <F9> :RustRun<CR>
+autocmd FileType rust nnoremap <silent> <leader>r :RustRun<CR>
+autocmd FileType rust nnoremap <silent> <leader>b :!cargo build<CR>
 
 " c
-autocmd FileType c nnoremap <silent> <F9> :w<CR> :!clear && clang -o %:r % && ./%:r<CR>
+autocmd FileType c nnoremap <silent> <leader>r :w<CR>:!clear && clang -o %:r % && ./%:r<CR>
+autocmd FileType c nnoremap <silent> <leader>c :w<CR>:!clear && clang -o %:r %<CR>
 
-nnoremap <silent> <leader>g :set hlsearch!<CR>
-nnoremap <silent> <leader>r :set relativenumber!<CR>
+nnoremap <silent> <leader>s :set hlsearch!<CR>
+nnoremap <silent> <leader>n :set relativenumber!<CR>
 vnoremap <silent> <leader>c :w !pbcopy<CR><CR>
 vnoremap <silent> <leader>p :r !pbpaste<CR><CR>
 
@@ -106,7 +109,7 @@ nnoremap <silent> <leader>l <C-w>l
 
 " open terminal at the bottom
 set termwinsize=8x0
-nnoremap <silent> <leader>4 :bel term<CR>
+nnoremap <silent> <leader>5 :bel term<CR>
 
 " enable project specific vimrc
 set exrc
