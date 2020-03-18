@@ -20,6 +20,7 @@ call plug#begin()
     Plug 'ayu-theme/ayu-vim'
     Plug 'junegunn/seoul256.vim'
     Plug 'dracula/vim', { 'as': 'dracula' }
+    Plug 'nanotech/jellybeans.vim'
 
 call plug#end()
 
@@ -58,6 +59,16 @@ syntax on
 
 " setting colorschemes
 set termguicolors
+set t_Co=256
+
+" jellybeans
+let g:jellybeans_overrides = {
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+\}
+if has('termguicolors') && &termguicolors
+    let g:jellybeans_overrides['background']['guibg'] = 'none'
+endif " use terminal background, set vim's bg to transparent
+
 
 " gruvbox
 let g:gruvbox_contrast_dark = 'hard'
@@ -65,7 +76,7 @@ let g:gruvbox_contrast_dark = 'hard'
 " seoul256
 let g:seoul256_background = 233
 
-colorscheme onedark
+colorscheme jellybeans
 
 " crt specific setting
 " sets background to absolute black
