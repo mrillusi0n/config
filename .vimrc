@@ -9,6 +9,8 @@ call plug#begin()
     " airline
     " Plug 'vim-airline/vim-airline'
     " Plug 'vim-airline/vim-airline-themes'
+
+    Plug 'nathanaelkane/vim-indent-guides'
      
     Plug 'mattn/webapi-vim'
     Plug 'JamshedVesuna/vim-markdown-preview'
@@ -21,9 +23,13 @@ call plug#begin()
     Plug 'junegunn/seoul256.vim'
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'nanotech/jellybeans.vim'
+    Plug 'arcticicestudio/nord-vim'
+    Plug 'drewtempelmeyer/palenight.vim'
+
+    Plug 'gko/vim-coloresque'
 
     " 8.2
-    Plug 'vim/killersheep'
+    " Plug 'vim/killersheep'
 
 call plug#end()
 
@@ -34,21 +40,25 @@ set showcmd
 set incsearch
 set ignorecase
 
+set shortmess+=I
+
 " airline settings
-" set shortmess+=IFWstTcAq
+" set shortmess+=FWstTcAq
 " set noshowmode
 " let g:airline_powerline_fonts = 1
 " let g:airline_section_error = ''
-" let g:airline_section_warning = ''
-" let g:airline_section_y = ''
-" let g:airline_section_c = ''
+let g:airline_section_warning = ''
  
 set ruler
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" relative numbering
+" dynamic cursor for Alacritty
+let &t_EI = "\<Esc>[2 q"
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+
 set relativenumber
 
 set autoindent
@@ -58,7 +68,6 @@ syntax on
 
 " setting colorschemes
 set termguicolors
-set t_Co=256
 
 " jellybeans
 let g:jellybeans_overrides = {
@@ -71,20 +80,25 @@ endif " use terminal background, set vim's bg to transparent
 
 
 " gruvbox
-let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_dark = 'soft'
 
 " seoul256
 let g:seoul256_background = 233
 
 colorscheme jellybeans
 
+set splitright
+set splitbelow
+
 set scrolloff=2
 
+set noswapfile
+set nobackup
+set nowritebackup
 
 " crt specific setting
 " sets background to absolute black
 " highlight Normal ctermbg=black
-
 
 " restore cursor position when opening a file
 autocmd BufReadPost *
@@ -96,9 +110,13 @@ autocmd BufReadPost *
 map <silent> <C-n> :NERDTreeToggle<CR>
 nnoremap <Space> @q
 
+" markdown
+autocmd FileType markdown colorscheme default
+
 " python
-autocmd FileType python nnoremap <silent> <leader>r :w<CR>:!clear && python3 %<CR>
-autocmd FileType python nnoremap <silent> <leader>i :w<CR>:!clear && bpython -q -i %<CR>
+autocmd FileType python nnoremap <silent> <leader>r :w !python3<CR>
+autocmd FileType python vnoremap <silent> <leader>r :w !python3<CR>
+autocmd FileType python nnoremap <silent> <leader>i :!clear && bpython -q -i %<CR>
 
 " rust
 let g:rustfmt_autosave = 1
@@ -120,10 +138,10 @@ vnoremap <silent> <leader>p :r !pbpaste<CR><CR>
 " vnoremap <S-k> :m -2<CR>gv
 
 " split window
-nnoremap <silent> <leader>h <C-w>h
-nnoremap <silent> <leader>j <C-w>j
-nnoremap <silent> <leader>k <C-w>k
-nnoremap <silent> <leader>l <C-w>l
+nnoremap <silent> <C-h> <C-w>h
+nnoremap <silent> <C-j> <C-w>j
+nnoremap <silent> <C-k> <C-w>k
+nnoremap <silent> <C-l> <C-w>l
 
 " buffer navigation
 nnoremap <silent> <leader>. :bn<CR>
@@ -136,3 +154,4 @@ nnoremap <silent> <leader>5 :bel term<CR>
 " enable project specific vimrc
 set exrc
 set secure
+
