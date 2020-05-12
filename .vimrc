@@ -21,7 +21,8 @@ call plug#begin()
     Plug 'morhetz/gruvbox'
     Plug 'ayu-theme/ayu-vim'
     Plug 'junegunn/seoul256.vim'
-    Plug 'dracula/vim', { 'as': 'dracula' }
+    " Plug 'dracula/vim'
+    Plug 'phanviet/vim-monokai-pro'
     Plug 'nanotech/jellybeans.vim'
     Plug 'arcticicestudio/nord-vim'
     Plug 'drewtempelmeyer/palenight.vim'
@@ -82,10 +83,19 @@ endif " use terminal background, set vim's bg to transparent
 " gruvbox
 let g:gruvbox_contrast_dark = 'soft'
 
+" monokai pro
+let g:lightline = {
+            \ 'colorscheme': 'monokai_pro',
+            \ }
+
 " seoul256
 let g:seoul256_background = 233
 
 colorscheme jellybeans
+
+" transparency
+" highlight Normal ctermbg=none
+" highlight LineNr ctermbg=none
 
 set splitright
 set splitbelow
@@ -109,9 +119,6 @@ autocmd BufReadPost *
 " key bindings
 map <silent> <C-n> :NERDTreeToggle<CR>
 nnoremap <Space> @q
-
-" markdown
-autocmd FileType markdown colorscheme default
 
 " python
 autocmd FileType python nnoremap <silent> <leader>r :w !python3<CR>
@@ -143,6 +150,8 @@ nnoremap <silent> <C-j> <C-w>j
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-l> <C-w>l
 
+inoremap <C-z> <Esc>zta
+
 " buffer navigation
 nnoremap <silent> <leader>. :bn<CR>
 nnoremap <silent> <leader>, :bp<CR>
@@ -154,4 +163,6 @@ nnoremap <silent> <leader>5 :bel term<CR>
 " enable project specific vimrc
 set exrc
 set secure
+
+nnoremap K k
 
