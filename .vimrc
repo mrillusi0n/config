@@ -10,6 +10,8 @@ call plug#begin()
     " Plug 'vim-airline/vim-airline'
     " Plug 'vim-airline/vim-airline-themes'
 
+    Plug 'vim-python/python-syntax'
+
     Plug 'nathanaelkane/vim-indent-guides'
      
     Plug 'mattn/webapi-vim'
@@ -21,11 +23,12 @@ call plug#begin()
     Plug 'morhetz/gruvbox'
     Plug 'ayu-theme/ayu-vim'
     Plug 'junegunn/seoul256.vim'
-    " Plug 'dracula/vim'
+    Plug 'dracula/vim'
     Plug 'phanviet/vim-monokai-pro'
     Plug 'nanotech/jellybeans.vim'
     Plug 'arcticicestudio/nord-vim'
     Plug 'drewtempelmeyer/palenight.vim'
+    Plug 'yassinebridi/vim-purpura'
 
     Plug 'gko/vim-coloresque'
 
@@ -48,7 +51,7 @@ set shortmess+=I
 " set noshowmode
 " let g:airline_powerline_fonts = 1
 " let g:airline_section_error = ''
-let g:airline_section_warning = ''
+" let g:airline_section_warning = ''
  
 set ruler
 set tabstop=4
@@ -56,9 +59,9 @@ set shiftwidth=4
 set expandtab
 
 " dynamic cursor for Alacritty
-let &t_EI = "\<Esc>[2 q"
-let &t_SI = "\<Esc>[6 q"
-let &t_SR = "\<Esc>[4 q"
+" let &t_EI = "\<Esc>[2 q"
+" let &t_SI = "\<Esc>[6 q"
+" let &t_SR = "\<Esc>[4 q"
 
 set relativenumber
 
@@ -71,17 +74,17 @@ syntax on
 set termguicolors
 
 " jellybeans
-let g:jellybeans_overrides = {
-\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
-\}
-
-if has('termguicolors') && &termguicolors
-    let g:jellybeans_overrides['background']['guibg'] = 'none'
-endif " use terminal background, set vim's bg to transparent
+" let g:jellybeans_overrides = {
+" \    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+" \}
+" 
+" if has('termguicolors') && &termguicolors
+    " let g:jellybeans_overrides['background']['guibg'] = 'none'
+" endif " use terminal background, set vim's bg to transparent
 
 
 " gruvbox
-let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_dark = 'hard'
 
 " monokai pro
 let g:lightline = {
@@ -91,11 +94,8 @@ let g:lightline = {
 " seoul256
 let g:seoul256_background = 233
 
-colorscheme jellybeans
-
-" transparency
-" highlight Normal ctermbg=none
-" highlight LineNr ctermbg=none
+" ayu
+let ayucolor="dark"
 
 set splitright
 set splitbelow
@@ -123,7 +123,9 @@ nnoremap <Space> @q
 " python
 autocmd FileType python nnoremap <silent> <leader>r :w !python3<CR>
 autocmd FileType python vnoremap <silent> <leader>r :w !python3<CR>
-autocmd FileType python nnoremap <silent> <leader>i :!clear && bpython -q -i %<CR>
+autocmd FileType python nnoremap <silent> <leader>i :!bpython -q -i %<CR>
+
+let g:python_highlight_all = 1
 
 " rust
 let g:rustfmt_autosave = 1
@@ -132,8 +134,8 @@ autocmd FileType rust nnoremap <silent> <leader>r :RustRun<CR>
 autocmd FileType rust nnoremap <silent> <leader>b :!cargo build<CR>
 
 " c
-autocmd FileType c nnoremap <silent> <leader>r :w<CR>:!clear && ./%:r<CR>
-autocmd FileType c nnoremap <silent> <leader>c :w<CR>:!clear && clang -o %:r %<CR>
+autocmd FileType c nnoremap <silent> <leader>r :w<CR>:!./%:r<CR>
+autocmd FileType c nnoremap <silent> <leader>c :w<CR>:!clang -o %:r %<CR>
 
 nnoremap <silent> <leader>s :set hlsearch!<CR>
 nnoremap <silent> <leader>n :set relativenumber!<CR>
@@ -164,5 +166,5 @@ nnoremap <silent> <leader>5 :bel term<CR>
 set exrc
 set secure
 
-nnoremap K k
+map K k
 
