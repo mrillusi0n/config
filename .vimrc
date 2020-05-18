@@ -6,13 +6,12 @@ call plug#begin()
     Plug 'tpope/vim-surround'
     Plug 'scrooloose/NERDTree'
 
-    " airline
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
-
     Plug 'vim-python/python-syntax'
 
     Plug 'nathanaelkane/vim-indent-guides'
+
+    " distraction free writing
+    Plug 'junegunn/goyo.vim'
      
     Plug 'mattn/webapi-vim'
     Plug 'JamshedVesuna/vim-markdown-preview'
@@ -74,13 +73,13 @@ syntax on
 set termguicolors
 
 " jellybeans
-" let g:jellybeans_overrides = {
-" \    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
-" \}
-" 
-" if has('termguicolors') && &termguicolors
-    " let g:jellybeans_overrides['background']['guibg'] = 'none'
-" endif " use terminal background, set vim's bg to transparent
+let g:jellybeans_overrides = {
+\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+\}
+
+if has('termguicolors') && &termguicolors
+  let g:jellybeans_overrides['background']['guibg'] = 'none'
+endif " use terminal background, set vim's bg to transparent
 
 
 " gruvbox
@@ -116,9 +115,7 @@ autocmd BufReadPost *
   \ |   exe "normal! g`\""
   \ | endif
 
-" key bindings
 map <silent> <C-n> :NERDTreeToggle<CR>
-nnoremap <Space> @q
 
 " python
 autocmd FileType python nnoremap <silent> <leader>r :w !python3<CR>
@@ -126,6 +123,8 @@ autocmd FileType python vnoremap <silent> <leader>r :w !python3<CR>
 autocmd FileType python nnoremap <silent> <leader>i :!bpython -q -i %<CR>
 
 let g:python_highlight_all = 1
+let g:python_highlight_indent_errors = 0
+let g:python_highlight_space_errors = 0
 
 " rust
 let g:rustfmt_autosave = 1
@@ -139,8 +138,6 @@ autocmd FileType c nnoremap <silent> <leader>c :w<CR>:!clang -o %:r %<CR>
 
 nnoremap <silent> <leader>s :set hlsearch!<CR>
 nnoremap <silent> <leader>n :set relativenumber!<CR>
-vnoremap <silent> <leader>c :w !pbcopy<CR><CR>
-vnoremap <silent> <leader>p :r !pbpaste<CR><CR>
 
 " moving blocks of text
 " vnoremap <S-j> :m +2<CR>gv
