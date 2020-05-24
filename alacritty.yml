@@ -34,7 +34,7 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 8
+    x: 12
     y: 8
 
   # Spread additional padding evenly around the terminal content.
@@ -96,8 +96,8 @@ font:
     # Default:
     #   - (macOS) Menlo 
     #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
-    family: Inconsolata for Powerline
+    #   - (Windowst Consolas
+    family: Anonymous Pro for Powerline
 
     # 0123456789
     # The `style` can be specified to pick a specific face.
@@ -115,7 +115,7 @@ font:
     #style: Bold
 
   # Italic font face
-  #italic:
+  italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
@@ -123,7 +123,7 @@ font:
     #family: monospace
 
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    style: Regular
 
   # Bold italic font face
   #bold_italic:
@@ -545,7 +545,7 @@ schemes:
         ayu: &ayu
           # Default colors
           primary:
-            background: '#0F0419'
+            background: '#0e1318'
             foreground: '#B3B1AD'
 
           # Normal colors
