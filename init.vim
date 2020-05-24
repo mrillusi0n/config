@@ -9,13 +9,15 @@ set inccommand=split
 " set colors
 colorscheme jellybeans
 
-" transparency
-" highlight Normal ctermbg=none guibg=none
-" highlight LineNr ctermbg=none guibg=none
-" highlight CursorLineNr guibg=none
+" no bg for current line number
+highlight CursorLineNr guibg=none
 
 vnoremap <silent> <leader>c "*y<CR>
+nnoremap <silent> <leader>g :Goyo 50%<CR>
 
-" set the leader key
-let mapleader=" "
+" transparency
+" highlight Normal ctermbg=none guibg=none
+" highlight CursorLineNr ctermbg=none guibg=none
+
+nnoremap <silent> <Space> @q
 

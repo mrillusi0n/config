@@ -8,6 +8,8 @@ call plug#begin()
 
     Plug 'vim-python/python-syntax'
 
+    " Plug 'itchyny/lightline.vim'
+
     Plug 'nathanaelkane/vim-indent-guides'
 
     " distraction free writing
@@ -116,6 +118,9 @@ autocmd BufReadPost *
   \ | endif
 
 map <silent> <C-n> :NERDTreeToggle<CR>
+
+"perl
+autocmd FileType perl nnoremap <silent> <leader>r :w !perl<CR>
 
 " python
 autocmd FileType python nnoremap <silent> <leader>r :w !python3<CR>
