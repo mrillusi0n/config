@@ -6,8 +6,18 @@ set laststatus=0 ruler
 
 set inccommand=split
 
+" custom onedark colors
+if (has("autocmd"))
+  augroup colorset
+      autocmd!
+      let s:back = { "gui": "none", "cterm": "145", "cterm16" : "7" }
+      autocmd ColorScheme * call onedark#set_highlight("Normal", { "bg": s:back }) " `bg` will not be styled since there is no `bg` setting
+  augroup END
+endif
+
+
 " set colors
-colorscheme jellybeans
+colorscheme onedark
 
 " no bg for current line number
 highlight CursorLineNr guibg=none
