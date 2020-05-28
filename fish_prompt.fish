@@ -4,5 +4,11 @@ function fish_prompt
 end
 
 function fish_right_prompt
+    if test ! $status -eq 0
+        set_color red
+    else
+        set_color blue
+    end
     basename (prompt_pwd)
+    set_color normal
 end
