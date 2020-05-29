@@ -3,15 +3,17 @@ let &packpath = &runtimepath
 source ~/.vimrc
 
 set laststatus=0 ruler
+" let g:airline_power_line_fonts = 1
 
 set inccommand=split
+set nowrap
 
-" custom onedark colors
+" making onedark have a transparent bg
 if (has("autocmd"))
   augroup colorset
       autocmd!
-      let s:back = { "gui": "none", "cterm": "145", "cterm16" : "7" }
-      autocmd ColorScheme * call onedark#set_highlight("Normal", { "bg": s:back }) " `bg` will not be styled since there is no `bg` setting
+      let s:back = { "gui": "none", "cterm": "none", "cterm16" : "none" }
+      autocmd ColorScheme * call onedark#set_highlight("Normal", { "bg": s:back })
   augroup END
 endif
 

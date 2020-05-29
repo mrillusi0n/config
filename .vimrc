@@ -8,6 +8,9 @@ call plug#begin()
 
     Plug 'vim-python/python-syntax'
 
+    " Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline-themes'
+
     " Plug 'itchyny/lightline.vim'
 
     Plug 'nathanaelkane/vim-indent-guides'
