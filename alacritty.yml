@@ -97,11 +97,11 @@ font:
     #   - (macOS) Menlo 
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Terminus (TTF)
+    family: Operator Mono
 
     # 0123456789
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Book
 
   # Bold font face
   #bold:
@@ -120,10 +120,10 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: Operator Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Book Italic
 
   # Bold italic font face
   #bold_italic:
@@ -137,7 +137,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 20
+  size: 19
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -343,33 +343,6 @@ schemes:
       #
       #indexed_colors: []
 
-    onedark: &onedark
-        primary:
-            background: '#282c34'
-            foreground: '#abb2bf'
-
-            normal:
-                # NOTE: Use '#131613' for the `black` color if you'd like to see
-                # black text on the background.
-                black:   '#282c34'
-                red:     '#e06c75'
-                green:   '#98c379'
-                yellow:  '#d19a66'
-                blue:    '#61afef'
-                magenta: '#c678dd'
-                cyan:    '#56b6c2'
-                white:   '#abb2bf'
-
-            bright:
-                black:   '#5c6370'
-                red:     '#e06c75'
-                green:   '#98c379'
-                yellow:  '#d19a66'
-                blue:    '#61afef'
-                magenta: '#c678dd'
-                cyan:    '#56b6c2'
-                white:   '#ffffff'
-
     monokai_soda: &monokai_soda
         primary:
             background: '#1a1a1a'
@@ -574,9 +547,9 @@ schemes:
     dracula: &dracula
       # Default colors
       primary:
-        background: '0x282a36'
+        background: '0X282A36'
         #background: '0x000000'
-        foreground: '0xf8f8f2'
+        foreground: '0XF8F8F2'
 
         # Bright and dim foreground colors
         #
@@ -637,7 +610,7 @@ schemes:
       indexed_colors: []
       colors:
     
-    one_dark: &one_dark
+    onedark: &onedark
           # Default colors
           primary:
             background: '0x1e2127'
@@ -702,7 +675,7 @@ schemes:
           #indexed_colors:
           #  - { index: 16, color: '0x000000' }
 
-colors: *one_dark
+colors: *onedark
 
 # Visual Bell
 #
