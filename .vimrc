@@ -6,7 +6,12 @@ call plug#begin()
     Plug 'tpope/vim-surround'
     Plug 'scrooloose/NERDTree'
 
-    Plug 'vim-python/python-syntax'
+    " markdown
+    Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+
+    " syntax
+    Plug 'sheerun/vim-polyglot'
+    " Plug 'vim-python/python-syntax'
 
     " Plug 'vim-airline/vim-airline'
     " Plug 'vim-airline/vim-airline-themes'
