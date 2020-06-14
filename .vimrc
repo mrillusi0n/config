@@ -79,6 +79,17 @@ syntax on
 " setting colorschemes
 set termguicolors
 
+" making onedark have a transparent bg
+"if (has("autocmd"))
+"  augroup colorset
+"      autocmd!
+"      let s:back = { "gui": "none", "cterm": "none", "cterm16" : "none" }
+"      autocmd ColorScheme * call onedark#set_highlight("Normal", { "bg": s:back })
+"  augroup END
+"endif
+
+
+
 " jellybeans
 let g:jellybeans_overrides = {
 \    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
