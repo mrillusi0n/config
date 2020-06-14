@@ -1,6 +1,6 @@
 " initialize pugins
 
-call plug#begin()
+call plug#begin('~/.config/nvim/plugged')
 
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
@@ -113,6 +113,8 @@ let g:seoul256_background = 233
 
 " ayu
 let ayucolor="dark"
+
+colorscheme jellybeans
 
 set splitright
 set splitbelow
