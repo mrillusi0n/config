@@ -13,6 +13,8 @@ function fish_right_prompt
         return
     end
 
+    basename (prompt_pwd)
+
     # Get the git directory for later use.
     # Return if not inside a Git repository work tree.
     if not set -l git_dir (command git rev-parse --git-dir 2>/dev/null)
@@ -115,8 +117,6 @@ function fish_right_prompt
     if string match -qe '\?\?' $porcelain_status
         set status_untracked 1
     end
-
-    basename (prompt_pwd)
 
     if test -n "$branch"
         if test $branch_detached -ne 0
