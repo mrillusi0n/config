@@ -11,6 +11,7 @@ call plug#begin()
 
     " syntax
     Plug 'sheerun/vim-polyglot'
+    Plug 'chrisbra/csv.vim'
     " Plug 'vim-python/python-syntax'
 
     " Plug 'vim-airline/vim-airline'
@@ -23,9 +24,6 @@ call plug#begin()
     " distraction free writing
     Plug 'junegunn/goyo.vim'
      
-    Plug 'mattn/webapi-vim'
-    Plug 'JamshedVesuna/vim-markdown-preview'
-
     " colorschemes
     Plug 'ajh17/spacegray.vim'
     Plug 'joshdick/onedark.vim'
@@ -36,10 +34,8 @@ call plug#begin()
     Plug 'phanviet/vim-monokai-pro'
     Plug 'nanotech/jellybeans.vim'
     Plug 'arcticicestudio/nord-vim'
-    Plug 'drewtempelmeyer/palenight.vim'
-    Plug 'yassinebridi/vim-purpura'
 
-    Plug 'gko/vim-coloresque'
+    Plug 'chrisbra/Colorizer'
 
     " 8.2
     " Plug 'vim/killersheep'
@@ -76,6 +72,7 @@ set relativenumber
 
 set autoindent
 filetype plugin indent on
+filetype plugin on
 syntax on
 
 

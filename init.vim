@@ -8,17 +8,17 @@ set laststatus=0 ruler
 set inccommand=split
 
 " making onedark have a transparent bg
-if (has("autocmd"))
-  augroup colorset
-      autocmd!
-      let s:back = { "gui": "none", "cterm": "none", "cterm16" : "none" }
-      autocmd ColorScheme * call onedark#set_highlight("Normal", { "bg": s:back })
-  augroup END
-endif
+"if (has("autocmd"))
+"  augroup colorset
+"      autocmd!
+"      let s:back = { "gui": "none", "cterm": "none", "cterm16" : "none" }
+"      autocmd ColorScheme * call onedark#set_highlight("Normal", { "bg": s:back })
+"  augroup END
+"endif
 
 
 " set colors
-colorscheme onedark
+colorscheme ayu
 
 " no bg for current line number
 highlight CursorLineNr guibg=none
@@ -48,3 +48,7 @@ let g:instant_markdown_mathjax = 1
 "let g:instant_markdown_autoscroll = 0
 let g:instant_markdown_port = 8888
 "let g:instant_markdown_python = 1
+
+let g:csv_delim=','
+
+nnoremap <silent> <leader>C :ColorToggle<CR>
