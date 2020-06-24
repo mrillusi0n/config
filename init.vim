@@ -79,7 +79,7 @@ syntax on
 " setting colorschemes
 set termguicolors
 
-" making onedark have a transparent bg
+" onedark
 "if (has("autocmd"))
 "  augroup colorset
 "      autocmd!
@@ -139,8 +139,8 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 autocmd FileType perl nnoremap <silent> <leader>r :w !perl<CR>
 
 " python
-autocmd FileType python nnoremap <silent> <leader>r :w !python3<CR>
-autocmd FileType python vnoremap <silent> <leader>r :w !python3<CR>
+autocmd FileType python nnoremap <silent> <leader>r :w !python3.8<CR>
+autocmd FileType python vnoremap <silent> <leader>r :w !python3.8<CR>
 autocmd FileType python nnoremap <silent> <leader>i :!bpython -q -i %<CR>
 
 let g:python_highlight_all = 1
@@ -208,7 +208,7 @@ nnoremap <silent> <Space> @q
 
 " weird snippets
 
-autocmd FileType c nnoremap <C-c> :r !cat ~/.config/nvim/boiler_c.c<CR>3-vg_<C-g>
+" autocmd FileType c nnoremap <C-c> :r !cat ~/.config/nvim/boiler_c.c<CR>3-vg_<C-g>
 
 " markdown
 
