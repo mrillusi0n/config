@@ -14,8 +14,8 @@ call plug#begin()
     Plug 'chrisbra/csv.vim'
     " Plug 'vim-python/python-syntax'
 
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
     " Plug 'itchyny/lightline.vim'
 
@@ -23,7 +23,7 @@ call plug#begin()
 
     " distraction free writing
     Plug 'junegunn/goyo.vim'
-     
+
     " colorschemes
     Plug 'ajh17/spacegray.vim'
     Plug 'joshdick/onedark.vim'
@@ -43,21 +43,19 @@ call plug#begin()
 call plug#end()
 
 " display what's being pressed
-set showcmd
+" set showcmd
 
 " searching
 set incsearch
 set ignorecase
 
-set shortmess+=I
-
 " airline settings
-" set shortmess+=FWstTcAq
-" set noshowmode
+set shortmess+=IFWstTcAq
+set noshowmode
 " let g:airline_powerline_fonts = 1
 " let g:airline_section_error = ''
 " let g:airline_section_warning = ''
- 
+
 set ruler
 set tabstop=4
 set shiftwidth=4
@@ -186,13 +184,11 @@ set secure
 
 map K k
 
-set laststatus=0 ruler
-" let g:airline_power_line_fonts = 1
 
 set inccommand=split
 
 " set colors
-colorscheme ayu
+colorscheme jellybeans
 
 " no bg for current line number
 highlight CursorLineNr guibg=none
