@@ -14,8 +14,8 @@ call plug#begin()
     Plug 'chrisbra/csv.vim'
     " Plug 'vim-python/python-syntax'
 
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    " Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline-themes'
 
     " Plug 'itchyny/lightline.vim'
 
@@ -50,8 +50,8 @@ set incsearch
 set ignorecase
 
 " airline settings
-set shortmess+=IFWstTcAq
-set noshowmode
+" set shortmess+=IFWstTcAq
+" set noshowmode
 " let g:airline_powerline_fonts = 1
 " let g:airline_section_error = ''
 " let g:airline_section_warning = ''
@@ -149,7 +149,7 @@ let g:python_highlight_space_errors = 0
 let g:rustfmt_autosave = 1
 let g:rust_clip_command = 'pbcopy'
 autocmd FileType rust nnoremap <silent> <leader>r :RustRun<CR>
-autocmd FileType rust nnoremap <silent> <leader>b :!cargo build<CR>
+autocmd FileType rust nnoremap <silent> <leader>b :!cargo run<CR>
 
 " c
 autocmd FileType c nnoremap <silent> <leader>r :w<CR>:!./%:r<CR>
@@ -187,8 +187,10 @@ map K k
 
 set inccommand=split
 
+set laststatus=0 ruler
+
 " set colors
-colorscheme jellybeans
+colorscheme ayu
 
 " no bg for current line number
 highlight CursorLineNr guibg=none
