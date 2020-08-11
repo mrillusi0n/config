@@ -94,14 +94,14 @@ font:
     # Font family
     #
     # Default:
-    #   - (macOS) Menlo 
+    #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Operator Mono
+    family: Anonymous Pro
 
     # 0123456789
     # The `style` can be specified to pick a specific face.
-    style: Book
+    #style: Book
 
   # Bold font face
   #bold:
@@ -109,21 +109,21 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    #family: Operator Mono
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    #style: Book
 
   # Italic font face
-  italic:
+  #italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Operator Mono
+    #family: Operator Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Book
+    #style: Book Italic
 
   # Bold italic font face
   #bold_italic:
@@ -137,13 +137,13 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 19
+  size: 18
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
     x: 0
-    y: 0
+    y: 4
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
@@ -462,8 +462,8 @@ schemes:
         gruvbox_dark: &gruvbox_dark
           # Default colors
           primary:
-            hard contrast: background = '#1d2021'
-            #background: '#282828'
+            #hard contrast: background = '#1d2021'
+            background: '#282828'
             #soft contrast: background = '#32302f'
             foreground: '#ebdbb2'
 
@@ -610,7 +610,7 @@ schemes:
       #
       indexed_colors: []
       colors:
-    
+
     onedark: &onedark
           # Default colors
           primary:
@@ -739,7 +739,7 @@ cursor:
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
-  unfocused_hollow: false
+  unfocused_hollow: true
 
   # Thickness of the cursor relative to the cell width as floating point number
   # from `0.0` to `1.0`.
@@ -766,7 +766,7 @@ cursor:
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
 # directory of the parent process will be used.
-#working_directory: None
+working_directory: /Volumes/development/theteachr/
 
 # WinPTY backend (Windows only)
 #
@@ -975,7 +975,7 @@ cursor:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # at once.
 key_bindings:
-  - { key: S,         mods: Control,             action: ToggleSimpleFullscreen          }
+  - { key: S,         mods: Control,             action: ToggleSimpleFullscreen   }
   #- { key: Paste,                                action: Paste                   }
   #- { key: Copy,                                 action: Copy                    }
   #- { key: L,         mods: Control,             action: ClearLogNotice          }
