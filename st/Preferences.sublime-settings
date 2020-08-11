@@ -1,0 +1,46 @@
+{
+	"added_words":
+	[
+		"3"
+	],
+	"auto_complete": false,
+	"caret_extra_bottom": -2,
+	"caret_extra_top": -2,
+	"caret_extra_width": 1,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Theme - Monokai Pro/Monokai Pro (Filter Octagon).sublime-color-scheme",
+	"file_exclude_patterns":
+	[
+		"*.out",
+		"*.o",
+		"*.pyc",
+		"*.class",
+		"*.DS_Store"
+	],
+	"folder_exclude_patterns":
+	[
+		"*.dSYM",
+		"__pycache__"
+	],
+	"font_face": "Anonymous Pro",
+	"font_options":
+	[
+		"no_italic",
+		"no_bold"
+	],
+	"font_size": 16,
+	"gutter_theme": "Packages/Theme - Monokai Pro/Monokai Pro.gutter-theme",
+	"highlight_line": false,
+	"ignored_packages":
+	[
+	],
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"mini_diff": "auto",
+	"neovintageous_build_version": 11100,
+	"overlay_scroll_bars": "disabled",
+	"scroll_past_end": true,
+	"scroll_speed": 0.2,
+	"theme": "gruvbox.sublime-theme",
+	"translate_tabs_to_spaces": true
+}

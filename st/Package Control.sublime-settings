@@ -1,0 +1,26 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"ayu",
+		"Dracula Color Scheme",
+		"ExportHtml",
+		"GitSavvy",
+		"gruvbox",
+		"Highlight",
+		"Material Theme",
+		"Materialize",
+		"Meetio Theme",
+		"Package Control",
+		"PackageResourceViewer",
+		"SideBarEnhancements",
+		"Theme - Afterglow",
+		"Theme - Gravity",
+		"Theme - Monokai Pro",
+		"Theme - Spaceblack"
+	]
+}
