@@ -59,7 +59,7 @@ set ignorecase
 set ruler
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set smarttab
 
 " dynamic cursor for Alacritty
 " let &t_EI = "\<Esc>[2 q"
