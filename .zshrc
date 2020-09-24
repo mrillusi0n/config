@@ -15,7 +15,7 @@ alias tc="cd /Volumes/development/theteachr"
 alias bp="bpython -q"
 
 # setting prompt
-PROMPT="%(?.%F{blue}.%F{red})>%f "
+PROMPT="%(?.%F{blue}.%F{red})$%f "
 RPROMPT="%F{magenta}%1~"
 
 export NVM_DIR="$HOME/.nvm"
