@@ -110,7 +110,7 @@ let g:lightline = {
 let g:seoul256_background = 233
 
 " ayu
-let ayucolor="dark"
+let ayucolor="mirage"
 
 set splitright
 set splitbelow
