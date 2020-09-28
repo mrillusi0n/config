@@ -3,6 +3,7 @@ compinit
 promptinit
 
 bindkey -v
+bindkey '^r' history-incremental-search-backward
 
 CASE_INSENSITIVE=true
 
