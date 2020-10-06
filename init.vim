@@ -61,10 +61,7 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 
-" dynamic cursor for Alacritty
-" let &t_EI = "\<Esc>[2 q"
-" let &t_SI = "\<Esc>[6 q"
-" let &t_SR = "\<Esc>[4 q"
+set nohlsearch
 
 set relativenumber
 
