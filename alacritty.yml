@@ -97,7 +97,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Inconsolata
+    family: DM Mono
 
     # 0123456789
     # The `style` can be specified to pick a specific face.
