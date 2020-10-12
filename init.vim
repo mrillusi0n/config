@@ -49,6 +49,8 @@ call plug#end()
 set incsearch
 set ignorecase
 
+set nowrap
+
 " airline settings
 " set shortmess+=IFWstTcAq
 " set noshowmode
@@ -107,7 +109,7 @@ let g:lightline = {
 let g:seoul256_background = 233
 
 " ayu
-let ayucolor="mirage"
+let ayucolor="dark"
 
 set splitright
 set splitbelow
@@ -196,7 +198,7 @@ vnoremap <silent> <leader>c "*y<CR>
 nnoremap <silent> <leader>g :Goyo 50%<CR>
 
 " transparency
-" highlight Normal ctermbg=none guibg=none
+highlight Normal ctermbg=none guibg=none
 " highlight CursorLineNr ctermbg=none guibg=none
 
 nnoremap <silent> <Space> @q
