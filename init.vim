@@ -6,18 +6,9 @@ call plug#begin()
     Plug 'tpope/vim-surround'
     Plug 'scrooloose/NERDTree'
 
-    " markdown
-    Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-
     " syntax
     Plug 'sheerun/vim-polyglot'
-    Plug 'chrisbra/csv.vim'
-    " Plug 'vim-python/python-syntax'
-
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
-
-    " Plug 'itchyny/lightline.vim'
+    Plug 'vim-python/python-syntax'
 
     Plug 'nathanaelkane/vim-indent-guides'
 
@@ -29,16 +20,10 @@ call plug#begin()
     Plug 'joshdick/onedark.vim'
     Plug 'morhetz/gruvbox'
     Plug 'ayu-theme/ayu-vim'
-    Plug 'junegunn/seoul256.vim'
     Plug 'dracula/vim'
-    Plug 'phanviet/vim-monokai-pro'
     Plug 'nanotech/jellybeans.vim'
-    Plug 'arcticicestudio/nord-vim'
 
     Plug 'chrisbra/Colorizer'
-
-    " 8.2
-    " Plug 'vim/killersheep'
 
 call plug#end()
 
@@ -48,15 +33,6 @@ call plug#end()
 " searching
 set incsearch
 set ignorecase
-
-set nowrap
-
-" airline settings
-" set shortmess+=IFWstTcAq
-" set noshowmode
-" let g:airline_powerline_fonts = 1
-" let g:airline_section_error = ''
-" let g:airline_section_warning = ''
 
 set ruler
 set tabstop=4
@@ -73,7 +49,7 @@ filetype plugin on
 syntax on
 
 
-" setting colorschemes
+" setting colorscheme specifics
 set termguicolors
 
 " onedark
@@ -188,7 +164,6 @@ set inccommand=split
 
 set laststatus=0 ruler
 
-" set colors
 colorscheme ayu
 
 " no bg for current line number
@@ -204,22 +179,6 @@ highlight Normal ctermbg=none guibg=none
 nnoremap <silent> <Space> @q
 
 " weird snippets
-
 " autocmd FileType c nnoremap <C-c> :r !cat ~/.config/nvim/boiler_c.c<CR>3-vg_<C-g>
-
-" markdown
-
-let g:instant_markdown_slow = 1
-let g:instant_markdown_autostart = 0
-"let g:instant_markdown_open_to_the_world = 1
-"let g:instant_markdown_allow_unsafe_content = 1
-"let g:instant_markdown_allow_external_content = 0
-let g:instant_markdown_mathjax = 1
-"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
-"let g:instant_markdown_autoscroll = 0
-let g:instant_markdown_port = 8888
-"let g:instant_markdown_python = 1
-
-let g:csv_delim=','
 
 nnoremap <silent> <leader>C :ColorToggle<CR>
