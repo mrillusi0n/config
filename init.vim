@@ -76,11 +76,6 @@ endif " use terminal background, set vim's bg to transparent
 " gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 
-" monokai pro
-let g:lightline = {
-            \ 'colorscheme': 'monokai_pro',
-            \ }
-
 " seoul256
 let g:seoul256_background = 233
 
@@ -129,6 +124,9 @@ autocmd FileType rust nnoremap <silent> <leader>b :!cargo run<CR>
 " c
 autocmd FileType c nnoremap <silent> <leader>r :w<CR>:!./%:r<CR>
 autocmd FileType c nnoremap <silent> <leader>c :w<CR>:!clang -o %:r %<CR>
+
+" md
+autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
 nnoremap <silent> <leader>s :set hlsearch!<CR>
 nnoremap <silent> <leader>n :set relativenumber!<CR>
@@ -182,3 +180,10 @@ nnoremap <silent> <Space> @q
 " autocmd FileType c nnoremap <C-c> :r !cat ~/.config/nvim/boiler_c.c<CR>3-vg_<C-g>
 
 nnoremap <silent> <leader>C :ColorToggle<CR>
+
+" e => everything
+onoremap ae :<C-U>silent! normal! ggVG<CR>
+vnoremap ae :<C-U>silent! normal! ggVG<CR>
+
+" parens
+onoremap inb :<C-u>normal! f(vib<Cr>
