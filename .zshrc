@@ -14,6 +14,7 @@ alias tc="cd /Volumes/development/theteachr"
 
 # commands
 alias bp="bpython -q"
+alias py="python3.8"
 
 # setting prompt
 PROMPT="%(?.%F{blue}.%F{red})$%f "
