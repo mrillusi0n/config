@@ -22,6 +22,7 @@ call plug#begin()
     Plug 'ayu-theme/ayu-vim'
     Plug 'dracula/vim'
     Plug 'nanotech/jellybeans.vim'
+	Plug 'branwright1/salvation-vim'
 
     Plug 'chrisbra/Colorizer'
 
@@ -80,7 +81,7 @@ let g:gruvbox_contrast_dark = 'hard'
 let g:seoul256_background = 233
 
 " ayu
-let ayucolor="dark"
+let ayucolor="mirage"
 
 set splitright
 set splitbelow
@@ -110,6 +111,7 @@ autocmd FileType perl nnoremap <silent> <leader>r :w !perl<CR>
 autocmd FileType python nnoremap <silent> <leader>r :w !python3.8<CR>
 autocmd FileType python vnoremap <silent> <leader>r :w !python3.8<CR>
 autocmd FileType python nnoremap <silent> <leader>i :!bpython -q -i %<CR>
+" autocmd FileType python silent !python3.8 % < input.txt > output.txt 2>&1 
 
 let g:python_highlight_all = 1
 let g:python_highlight_indent_errors = 0
@@ -127,6 +129,8 @@ autocmd FileType c nnoremap <silent> <leader>c :w<CR>:!clang -o %:r %<CR>
 
 " md
 autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+autocmd BufWritePost init.vim :silent! source %
 
 nnoremap <silent> <leader>s :set hlsearch!<CR>
 nnoremap <silent> <leader>n :set relativenumber!<CR>
@@ -157,7 +161,6 @@ set secure
 
 map K k
 
-
 set inccommand=split
 
 set laststatus=0 ruler
@@ -171,7 +174,7 @@ vnoremap <silent> <leader>c "*y<CR>
 nnoremap <silent> <leader>g :Goyo 50%<CR>
 
 " transparency
-highlight Normal ctermbg=none guibg=none
+" highlight Normal ctermbg=none guibg=none
 " highlight CursorLineNr ctermbg=none guibg=none
 
 nnoremap <silent> <Space> @q
@@ -182,7 +185,7 @@ nnoremap <silent> <Space> @q
 nnoremap <silent> <leader>C :ColorToggle<CR>
 
 " e => everything
-onoremap ae :<C-U>silent! normal! ggVG<CR>
+omap ae :<C-U>silent! normal! ggVG<CR>
 vnoremap ae :<C-U>silent! normal! ggVG<CR>
 
 " parens
