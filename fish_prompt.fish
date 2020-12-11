@@ -4,7 +4,7 @@ function fish_prompt
     else
         set_color blue
     end
-    echo -n "➤ "
+    echo -n "\$ "
     set_color normal
 end
 
