@@ -97,7 +97,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Overpass Mono
+    family: Terminus (TTF)
 
     # 0123456789
     # The `style` can be specified to pick a specific face.
@@ -137,7 +137,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 18
+  size: 19
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -261,7 +261,8 @@ schemes:
     tomorrow_night: &tomorrow_night
       # Default colors
       primary:
-        background: '#000000'
+        background: '0x1F1F1F'
+        #background: '#000000'
         foreground: '#eaeaea'
 
         # Bright and dim foreground colors
@@ -463,7 +464,8 @@ schemes:
           # Default colors
           primary:
             #hard contrast: background = '#1d2021'
-            background: '#282828'
+            #background: '#282828'
+            background: '0x1F1F1F'
             #soft contrast: background = '#32302f'
             foreground: '#ebdbb2'
 
@@ -545,8 +547,8 @@ schemes:
         ayu: &ayu
           # Default colors
           primary:
-            background: '#0f1419'
-            #background: '#212733'
+            #background: '#0f1419'
+            background: '#212733'
             foreground: '#B3B1AD'
 
           # Normal colors
@@ -635,7 +637,63 @@ schemes:
       #   `- { index: 16, color: '#ff00ff' }`
       #
       indexed_colors: []
-      colors:
+
+    hybrid: &hybrid
+      # Default colors
+      primary:
+        background: '0x1d1f21'
+        foreground: '0xc5c8c6'
+
+      # Normal colors
+      normal:
+        black:   '0x282a2e'
+        red:     '0xa54242'
+        green:   '0x8c9440'
+        yellow:  '0xde935f'
+        blue:    '0x5f819d'
+        magenta: '0x85678f'
+        cyan:    '0x5e8d87'
+        white:   '0x707880'
+
+      # Bright colors
+      bright:
+        black:   '0x373b41'
+        red:     '0xcc6666'
+        green:   '0xb5bd68'
+        yellow:  '0xf0c674'
+        blue:    '0x81a2be'
+        magenta: '0xb294bb'
+        cyan:    '0x8abeb7'
+        white:   '0xc5c8c6'
+
+      low_contrast: &low_contrast
+        # Default colors
+        primary:
+          background: '0x1F1F1F'
+          foreground: '0xc5c8c6'
+
+        # Normal colors
+        normal:
+          black:   '0x282a2e'
+          red:     '0x621818'
+          green:   '0x505616'
+          yellow:  '0x78421c'
+          blue:    '0x2c4a62'
+          magenta: '0x4f3258'
+          cyan:    '0x244e49'
+          white:   '0x485460'
+
+        # Bright colors
+        bright:
+          black:   '0x373b41'
+          red:     '0x872626'
+          green:   '0x757c2e'
+          yellow:  '0xa97b21'
+          blue:    '0x42637e'
+          magenta: '0x845991'
+          cyan:    '0x508981'
+          white:   '0x8d9991'
+
 
     onedark: &onedark
           # Default colors
@@ -702,6 +760,7 @@ schemes:
           # When these are not set, they're filled with sensible defaults.
           #indexed_colors:
           #  - { index: 16, color: '#000000' }
+
 
 colors: *ayu
 
