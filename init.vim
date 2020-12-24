@@ -10,6 +10,8 @@ call plug#begin()
     Plug 'sheerun/vim-polyglot'
     Plug 'vim-python/python-syntax'
 
+	Plug 'rust-lang/rust.vim'
+
     Plug 'nathanaelkane/vim-indent-guides'
 
     " distraction free writing
@@ -81,7 +83,7 @@ let g:gruvbox_contrast_dark = 'hard'
 let g:seoul256_background = 233
 
 " ayu
-let ayucolor="mirage"
+let ayucolor="dark"
 
 set splitright
 set splitbelow
@@ -91,10 +93,6 @@ set scrolloff=2
 set noswapfile
 set nobackup
 set nowritebackup
-
-" crt specific setting
-" sets background to absolute black
-" highlight Normal ctermbg=black
 
 " restore cursor position when opening a file
 autocmd BufReadPost *
@@ -120,15 +118,23 @@ let g:python_highlight_space_errors = 0
 " rust
 let g:rustfmt_autosave = 1
 let g:rust_clip_command = 'pbcopy'
-autocmd FileType rust nnoremap <silent> <leader>r :RustRun<CR>
-autocmd FileType rust nnoremap <silent> <leader>b :!cargo run<CR>
 
-" c
-autocmd FileType c nnoremap <silent> <leader>r :w<CR>:!./%:r<CR>
-autocmd FileType c nnoremap <silent> <leader>c :w<CR>:!clang -o %:r %<CR>
+augroup RUST
+    autocmd!
+    autocmd FileType rust nnoremap <silent> <leader>r :RustRun<CR>
+    autocmd FileType rust nnoremap <silent> <leader>c :Crun<CR>
+augroup END
 
-" md
-autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+augroup C
+    autocmd!
+    autocmd FileType c nnoremap <silent> <leader>r :w<CR>:!./%:r<CR>
+    autocmd FileType c nnoremap <silent> <leader>c :w<CR>:!clang -o %:r %<CR>
+augroup END
+
+augroup MARKDOWN
+    autocmd!
+    autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+augroup END
 
 autocmd BufWritePost init.vim :silent! source %
 
@@ -155,6 +161,8 @@ nnoremap <silent> <leader>, :bp<CR>
 set splitright
 nnoremap <silent> <leader>5 :bel term<CR>
 
+set mouse=a
+
 " enable project specific vimrc
 set exrc
 set secure
@@ -174,7 +182,7 @@ vnoremap <silent> <leader>c "*y<CR>
 nnoremap <silent> <leader>g :Goyo 50%<CR>
 
 " transparency
-" highlight Normal ctermbg=none guibg=none
+highlight Normal ctermbg=none guibg=none
 " highlight CursorLineNr ctermbg=none guibg=none
 
 nnoremap <silent> <Space> @q
