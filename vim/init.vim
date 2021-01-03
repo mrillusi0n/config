@@ -1,30 +1,30 @@
 " initialize plugins
 call plug#begin()
 
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-surround'
-    Plug 'scrooloose/NERDTree'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/NERDTree'
 
-    " syntax
-    Plug 'sheerun/vim-polyglot'
-    Plug 'vim-python/python-syntax'
+" syntax
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-python/python-syntax'
 
-	Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim'
 
-    Plug 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 
-    " colorschemes
-    Plug 'ajh17/spacegray.vim'
-    Plug 'joshdick/onedark.vim'
-    Plug 'morhetz/gruvbox'
-    Plug 'ayu-theme/ayu-vim'
-    Plug 'dracula/vim'
-    Plug 'nanotech/jellybeans.vim'
-	Plug 'branwright1/salvation-vim'
-    Plug 'arcticicestudio/nord-vim'
-	Plug 'sainnhe/forest-night'
+" colorschemes
+Plug 'ajh17/spacegray.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim'
+Plug 'dracula/vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'branwright1/salvation-vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'sainnhe/forest-night'
 
-    Plug 'chrisbra/Colorizer'
+Plug 'chrisbra/Colorizer'
 
 call plug#end()
 
@@ -65,9 +65,9 @@ set nowritebackup
 
 " restore cursor position when opening a file
 autocmd BufReadPost *
-  \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
-  \ |   exe "normal! g`\""
-  \ | endif
+			\ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+			\ |   exe "normal! g`\""
+			\ | endif
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 
