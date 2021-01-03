@@ -97,7 +97,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Terminus (TTF)
+    family: Roboto Mono
 
     # 0123456789
     # The `style` can be specified to pick a specific face.
@@ -112,7 +112,7 @@ font:
     #family: Operator Mono
 
     # The `style` can be specified to pick a specific face.
-    #style: Book
+    style: Regular
 
   # Italic font face
   #italic:
@@ -137,7 +137,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 19
+  size: 18
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -166,7 +166,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -258,10 +258,38 @@ font:
   #indexed_colors: []
 
 schemes:
+    forest_night: &forest_night
+      # Default colors
+      primary:
+        background: '0x323d43'
+        foreground: '0xf1eee4'
+
+      # Normal colors
+      normal:
+        black:   '0x3c474d'
+        red:     '0xe68183'
+        green:   '0xa7c080'
+        yellow:  '0xe39b7b'
+        blue:    '0x83b6af'
+        magenta: '0xd39bb6'
+        cyan:    '0x87c095'
+        white:   '0xe8ecee'
+
+      # Bright colors
+      bright:
+        black:   '0x465258'
+        red:     '0xea9495'
+        green:   '0xb6cb95'
+        yellow:  '0xe8ab91'
+        blue:    '0x96c1bb'
+        magenta: '0xdaacc2'
+        cyan:    '0x9acaa6'
+        white:   '0xf3f5f6'
+    
     tomorrow_night: &tomorrow_night
       # Default colors
       primary:
-        background: '0x1F1F1F'
+        background: '#111314'
         #background: '#000000'
         foreground: '#eaeaea'
 
@@ -547,18 +575,19 @@ schemes:
         ayu: &ayu
           # Default colors
           primary:
+            #background: '#FFFFFF'
             #background: '#0f1419'
             background: '#212733'
             foreground: '#B3B1AD'
 
           # Normal colors
           normal:
-            black: '#01060E'
+            black: '#555555'
             red: '#EA6C73'
             green: '#91B362'
             yellow: '#F9AF4F'
             blue: '#53BDFA'
-            magenta: '#FAE994'
+            magenta: '#D0B6FF'
             cyan: '#90E1C6'
             white: '#C7C7C7'
 
@@ -569,7 +598,7 @@ schemes:
             green: '#C2D94C'
             yellow: '#FFB454'
             blue: '#59C2FF'
-            magenta: '#FFEE99'
+            magenta: '#D5BBFF'
             cyan: '#95E6CB'
             white: '#FFFFFF'
 
@@ -762,7 +791,7 @@ schemes:
           #  - { index: 16, color: '#000000' }
 
 
-colors: *ayu
+colors: *forest_night
 
 # Visual Bell
 #
@@ -812,7 +841,7 @@ cursor:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  #style: Underline
+  #style: Beam
 
   # Vi mode cursor style
   #
@@ -820,7 +849,7 @@ cursor:
   # the style of the active value of the normal cursor.
   #
   # See `cursor.style` for available options.
-  #vi_mode_style: Beam
+  vi_mode_style: Beam
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
