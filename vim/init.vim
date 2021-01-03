@@ -1,5 +1,4 @@
-" initialize pugins
-
+" initialize plugins
 call plug#begin()
 
     Plug 'tpope/vim-fugitive'
