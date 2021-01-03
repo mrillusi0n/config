@@ -14,9 +14,6 @@ call plug#begin()
 
     Plug 'nathanaelkane/vim-indent-guides'
 
-    " distraction free writing
-    Plug 'junegunn/goyo.vim'
-
     " colorschemes
     Plug 'ajh17/spacegray.vim'
     Plug 'joshdick/onedark.vim'
@@ -25,65 +22,38 @@ call plug#begin()
     Plug 'dracula/vim'
     Plug 'nanotech/jellybeans.vim'
 	Plug 'branwright1/salvation-vim'
+    Plug 'arcticicestudio/nord-vim'
+	Plug 'sainnhe/forest-night'
 
     Plug 'chrisbra/Colorizer'
 
 call plug#end()
 
 " display what's being pressed
-" set showcmd
+set showcmd
 
 " searching
 set incsearch
 set ignorecase
 
 set ruler
-set tabstop=4
-set shiftwidth=4
-set smarttab
+set tabstop=4 shiftwidth=4 smarttab
 
 set nohlsearch
-
 set relativenumber
-
 set autoindent
+set autoread
+
 filetype plugin indent on
-filetype plugin on
 syntax on
 
+set shortmess=I
 
 " setting colorscheme specifics
 set termguicolors
 
-" onedark
-"if (has("autocmd"))
-"  augroup colorset
-"      autocmd!
-"      let s:back = { "gui": "none", "cterm": "none", "cterm16" : "none" }
-"      autocmd ColorScheme * call onedark#set_highlight("Normal", { "bg": s:back })
-"  augroup END
-"endif
-
-
-
-" jellybeans
-let g:jellybeans_overrides = {
-\    'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
-\}
-
-if has('termguicolors') && &termguicolors
-  let g:jellybeans_overrides['background']['guibg'] = 'none'
-endif " use terminal background, set vim's bg to transparent
-
-
-" gruvbox
-let g:gruvbox_contrast_dark = 'hard'
-
-" seoul256
-let g:seoul256_background = 233
-
 " ayu
-let ayucolor="dark"
+let ayucolor="mirage"
 
 set splitright
 set splitbelow
@@ -102,15 +72,6 @@ autocmd BufReadPost *
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 
-"perl
-autocmd FileType perl nnoremap <silent> <leader>r :w !perl<CR>
-
-" python
-autocmd FileType python nnoremap <silent> <leader>r :w !python3.8<CR>
-autocmd FileType python vnoremap <silent> <leader>r :w !python3.8<CR>
-autocmd FileType python nnoremap <silent> <leader>i :!bpython -q -i %<CR>
-" autocmd FileType python silent !python3.8 % < input.txt > output.txt 2>&1 
-
 let g:python_highlight_all = 1
 let g:python_highlight_indent_errors = 0
 let g:python_highlight_space_errors = 0
@@ -119,31 +80,11 @@ let g:python_highlight_space_errors = 0
 let g:rustfmt_autosave = 1
 let g:rust_clip_command = 'pbcopy'
 
-augroup RUST
-    autocmd!
-    autocmd FileType rust nnoremap <silent> <leader>r :RustRun<CR>
-    autocmd FileType rust nnoremap <silent> <leader>c :Crun<CR>
-augroup END
-
-augroup C
-    autocmd!
-    autocmd FileType c nnoremap <silent> <leader>r :w<CR>:!./%:r<CR>
-    autocmd FileType c nnoremap <silent> <leader>c :w<CR>:!clang -o %:r %<CR>
-augroup END
-
-augroup MARKDOWN
-    autocmd!
-    autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-augroup END
-
-autocmd BufWritePost init.vim :silent! source %
+" source config on write (causing slowness)
+" autocmd BufWritePost init.vim :silent! source %
 
 nnoremap <silent> <leader>s :set hlsearch!<CR>
 nnoremap <silent> <leader>n :set relativenumber!<CR>
-
-" moving blocks of text
-" vnoremap <S-j> :m +2<CR>gv
-" vnoremap <S-k> :m -2<CR>gv
 
 " split window
 nnoremap <silent> <C-h> <C-w>h
@@ -157,15 +98,11 @@ inoremap <C-z> <Esc>zta
 nnoremap <silent> <leader>. :bn<CR>
 nnoremap <silent> <leader>, :bp<CR>
 
-" open terminal at the bottom
-set splitright
-nnoremap <silent> <leader>5 :bel term<CR>
-
+" enable mouse in all modes
 set mouse=a
 
 " enable project specific vimrc
-set exrc
-set secure
+set exrc secure
 
 map K k
 
@@ -173,19 +110,19 @@ set inccommand=split
 
 set laststatus=0 ruler
 
-colorscheme ayu
+colorscheme forest-night
 
 " no bg for current line number
 highlight CursorLineNr guibg=none
+
+nnoremap <Space> :
 
 vnoremap <silent> <leader>c "*y<CR>
 nnoremap <silent> <leader>g :Goyo 50%<CR>
 
 " transparency
 highlight Normal ctermbg=none guibg=none
-" highlight CursorLineNr ctermbg=none guibg=none
-
-nnoremap <silent> <Space> @q
+highlight CursorLineNr ctermbg=none guibg=none
 
 " weird snippets
 " autocmd FileType c nnoremap <C-c> :r !cat ~/.config/nvim/boiler_c.c<CR>3-vg_<C-g>
