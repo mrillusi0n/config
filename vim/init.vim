@@ -1,3 +1,13 @@
+"     .   oooo                      .                                 oooo                 
+"   .o8   `888                    .o8                                 `888                 
+" .o888oo  888 .oo.    .ooooo.  .o888oo  .ooooo.   .oooo.    .ooooo.   888 .oo.   oooo d8b 
+"   888    888P"Y88b  d88' `88b   888   d88' `88b `P  )88b  d88' `"Y8  888P"Y88b  `888""8P 
+"   888    888   888  888ooo888   888   888ooo888  .oP"888  888        888   888   888     
+"   888 .  888   888  888    .o   888 . 888    .o d8(  888  888   .o8  888   888   888     
+"   "888" o888o o888o `Y8bod8P'   "888" `Y8bod8P' `Y888""8o `Y8bod8P' o888o o888o d888b    
+
+
+
 " initialize plugins
 call plug#begin()
 
@@ -7,11 +17,10 @@ Plug 'scrooloose/NERDTree'
 
 " syntax
 Plug 'sheerun/vim-polyglot'
+
+" lang specific
 Plug 'vim-python/python-syntax'
-
 Plug 'rust-lang/rust.vim'
-
-Plug 'nathanaelkane/vim-indent-guides'
 
 " colorschemes
 Plug 'ajh17/spacegray.vim'
@@ -23,6 +32,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'branwright1/salvation-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/forest-night'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 Plug 'chrisbra/Colorizer'
 
@@ -30,6 +40,8 @@ call plug#end()
 
 " display what's being pressed
 set showcmd
+
+set autochdir
 
 " searching
 set incsearch
@@ -104,6 +116,7 @@ set mouse=a
 set exrc secure
 
 map K k
+map Y y$
 
 set inccommand=split
 
@@ -112,21 +125,18 @@ set laststatus=0 ruler
 colorscheme forest-night
 
 " no bg for current line number
-highlight CursorLineNr guibg=none
+" highlight CursorLineNr guibg=none
 
-nnoremap <Space> :
+map <Space> :
 
-vnoremap <silent> <leader>c "*y<CR>
-nnoremap <silent> <leader>g :Goyo 50%<CR>
+vnoremap <silent> <leader>c "+y<CR>
 
 " transparency
-highlight Normal ctermbg=none guibg=none
-highlight CursorLineNr ctermbg=none guibg=none
+" highlight Normal ctermbg=none guibg=none
+" highlight CursorLineNr ctermbg=none guibg=none
 
 " weird snippets
 " autocmd FileType c nnoremap <C-c> :r !cat ~/.config/nvim/boiler_c.c<CR>3-vg_<C-g>
-
-nnoremap <silent> <leader>C :ColorToggle<CR>
 
 " e => everything
 omap ae :<C-U>silent! normal! ggVG<CR>
