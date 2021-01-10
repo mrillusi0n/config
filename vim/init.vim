@@ -58,7 +58,7 @@ set autoread
 filetype plugin indent on
 syntax on
 
-set shortmess=IF
+set shortmess+=IFT
 
 " setting colorscheme specifics
 set termguicolors
