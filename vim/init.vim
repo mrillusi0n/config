@@ -17,6 +17,8 @@ Plug 'scrooloose/NERDTree'
 
 " syntax
 Plug 'sheerun/vim-polyglot'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'StanAngeloff/php.vim'
 
 " lang specific
 Plug 'vim-python/python-syntax'
@@ -38,6 +40,8 @@ Plug 'chrisbra/Colorizer'
 
 call plug#end()
 
+runtime macros/matchit.vim
+
 " display what's being pressed
 set showcmd
 
@@ -46,6 +50,7 @@ set autochdir
 " searching
 set incsearch
 set ignorecase
+
 
 set ruler
 set tabstop=4 shiftwidth=4 smarttab
@@ -144,3 +149,17 @@ vnoremap ae :<C-U>silent! normal! ggVG<CR>
 
 " parens
 onoremap inb :<C-u>normal! f(vib<Cr>
+
+let s:scheme_index = 0
+
+function! NextColorScheme()
+	echo "Switching Colors"
+	let s:schemes = getcompletion('', 'color')
+	execute "colorscheme" s:schemes[s:scheme_index]
+	let s:scheme_index = (s:scheme_index + 1) % len(s:schemes)
+endfunction
+
+nnoremap <leader>cc :call NextColorScheme()<CR>
+
+" normal escape in terminal
+tnoremap <Esc> <C-\><C-n>
