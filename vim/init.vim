@@ -63,6 +63,8 @@ set autoread
 filetype plugin indent on
 syntax on
 
+set hidden
+
 set shortmess+=IFT
 
 " setting colorscheme specifics
@@ -163,3 +165,8 @@ nnoremap <leader>cc :call NextColorScheme()<CR>
 
 " normal escape in terminal
 tnoremap <Esc> <C-\><C-n>
+
+augroup Terminal
+	autocmd!
+	autocmd BufWinEnter,WinEnter term://* startinsert
+augroup END
