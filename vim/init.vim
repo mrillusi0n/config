@@ -145,6 +145,11 @@ vnoremap <silent> <leader>c "+y<CR>
 " weird snippets
 " autocmd FileType c nnoremap <C-c> :r !cat ~/.config/nvim/boiler_c.c<CR>3-vg_<C-g>
 
+augroup CSNIPPET
+	autocmd!
+	autocmd BufNewFile *.c :0r ~/.config/nvim/snippets/c/boiler.c
+augroup END
+
 " e => everything
 omap ae :<C-U>silent! normal! ggVG<CR>
 vnoremap ae :<C-U>silent! normal! ggVG<CR>
