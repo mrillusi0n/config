@@ -23,6 +23,7 @@ Plug 'StanAngeloff/php.vim'
 " lang specific
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
+Plug 'mattn/emmet-vim'
 
 " colorschemes
 Plug 'ajh17/spacegray.vim'
@@ -33,7 +34,7 @@ Plug 'dracula/vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'branwright1/salvation-vim'
 Plug 'arcticicestudio/nord-vim'
-Plug 'sainnhe/forest-night'
+Plug 'sainnhe/everforest'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 Plug 'chrisbra/Colorizer'
@@ -51,6 +52,7 @@ set autochdir
 set incsearch
 set ignorecase
 
+set noignorecase
 
 set ruler
 set tabstop=4 shiftwidth=4 smarttab
@@ -110,8 +112,6 @@ nnoremap <silent> <C-j> <C-w>j
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-l> <C-w>l
 
-inoremap <C-z> <Esc>zta
-
 " buffer navigation
 nnoremap <silent> <leader>. :bn<CR>
 nnoremap <silent> <leader>, :bp<CR>
@@ -129,14 +129,21 @@ set inccommand=split
 
 set laststatus=0 ruler
 
-colorscheme forest-night
+colorscheme ayu
+
+" emmet settings
+let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key='<C-Z>'
+
+autocmd FileType html,css EmmetInstall
 
 " no bg for current line number
 " highlight CursorLineNr guibg=none
 
 map <Space> :
 
-vnoremap <silent> <leader>c "+y<CR>
+" copy to system clip
+vnoremap <silent> <leader>y "*y<CR>
 
 " transparency
 " highlight Normal ctermbg=none guibg=none
