@@ -10,7 +10,7 @@ SETUVAR _fish_abbr_tc:cd\x20/Volumes/development/theteachr
 SETUVAR _fish_abbr_tree:tree\x20\x2dCL\x202
 SETUVAR fish_color_autosuggestion:7c8377
 SETUVAR fish_color_cancel:normal
-SETUVAR fish_color_command:afff87
+SETUVAR fish_color_command:brgreen
 SETUVAR fish_color_comment:5f5f5f
 SETUVAR fish_color_cwd:008000
 SETUVAR fish_color_cwd_root:800000
