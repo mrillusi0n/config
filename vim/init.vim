@@ -32,7 +32,6 @@ Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim'
 Plug 'dracula/vim'
 Plug 'nanotech/jellybeans.vim'
-Plug 'branwright1/salvation-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/everforest'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
@@ -45,8 +44,7 @@ runtime macros/matchit.vim
 
 " display what's being pressed
 set showcmd
-
-set autochdir
+set noexpandtab
 
 " searching
 set incsearch
