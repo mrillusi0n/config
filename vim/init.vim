@@ -68,6 +68,9 @@ set shortmess+=IFT
 " setting colorscheme specifics
 set termguicolors
 
+" everforest
+let g:everforest_background = 'hard'
+
 " ayu
 let ayucolor="mirage"
 
