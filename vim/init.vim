@@ -35,8 +35,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/everforest'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-
-Plug 'chrisbra/Colorizer'
+Plug 'ghifarit53/tokyonight-vim'
 
 call plug#end()
 
@@ -59,7 +58,6 @@ set nohlsearch
 set relativenumber
 set autoindent
 set autoread
-
 filetype plugin indent on
 syntax on
 
@@ -127,7 +125,7 @@ set inccommand=split
 
 set laststatus=0 ruler
 
-colorscheme ayu
+colorscheme tokyonight
 
 " emmet settings
 let g:user_emmet_install_global = 0
