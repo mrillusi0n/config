@@ -18,7 +18,6 @@ Plug 'scrooloose/NERDTree'
 " syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'StanAngeloff/php.vim'
 
 " lang specific
 Plug 'vim-python/python-syntax'
