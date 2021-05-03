@@ -15,14 +15,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/NERDTree'
 
-" syntax
-Plug 'sheerun/vim-polyglot'
-Plug 'hail2u/vim-css3-syntax'
-
 " lang specific
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
-Plug 'mattn/emmet-vim'
 
 " colorschemes
 Plug 'ajh17/spacegray.vim'
