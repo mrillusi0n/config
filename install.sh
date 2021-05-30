@@ -1,6 +1,13 @@
 # Create symlinks
 
-ln -sf $(readlink -f nvim) $HOME/.config
+## nvim
+ln -sf $(readlink -f nvim) $HOME/.config/nvim
+
+## zsh
+ln -sf $(readlink -f .zshrc) $HOME/.zshrc
+
+## tmux
+ln -sf $(readlink -f .tmux.conf) $HOME/.tmux.conf
 
 # Install Vim Plug
 
