@@ -56,6 +56,7 @@ filetype plugin indent on
 syntax on
 
 set hidden
+set nowrap
 
 set shortmess+=IFT
 
@@ -122,7 +123,7 @@ set inccommand=split
 
 set laststatus=0 ruler
 
-colorscheme tokyonight
+colorscheme everforest
 
 " no bg for current line number
 " highlight CursorLineNr guibg=none
@@ -133,8 +134,9 @@ map <Space> :
 vnoremap <silent> <leader>y "*y<CR>
 
 " transparency
-" highlight Normal ctermbg=none guibg=none
-" highlight CursorLineNr ctermbg=none guibg=none
+highlight Normal ctermbg=none guibg=none
+highlight CursorLineNr ctermbg=none guibg=none
+highlight EndOfBuffer ctermbg=none guibg=none
 
 " weird snippets
 " autocmd FileType c nnoremap <C-c> :r !cat ~/.config/nvim/boiler_c.c<CR>3-vg_<C-g>
