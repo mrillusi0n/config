@@ -124,12 +124,6 @@ set laststatus=0 ruler
 
 colorscheme tokyonight
 
-" emmet settings
-let g:user_emmet_install_global = 0
-let g:user_emmet_leader_key='<C-Z>'
-
-autocmd FileType html,css EmmetInstall
-
 " no bg for current line number
 " highlight CursorLineNr guibg=none
 
