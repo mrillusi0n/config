@@ -11,9 +11,11 @@
 " initialize plugins
 call plug#begin()
 
+" quality of life
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/NERDTree'
+Plug 'preservim/nerdcommenter'
 
 " lang specific
 Plug 'vim-python/python-syntax'
