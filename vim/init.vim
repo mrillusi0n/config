@@ -144,8 +144,9 @@ map <Space> :
 vnoremap <silent> <leader>y "*y<CR>
 
 " transparency
-" highlight Normal ctermbg=none guibg=none
-" highlight CursorLineNr ctermbg=none guibg=none
+highlight Normal ctermbg=none guibg=none
+highlight CursorLineNr ctermbg=none guibg=none
+highlight EndOfBuffer ctermbg=none guibg=none
 
 " weird snippets
 " autocmd FileType c nnoremap <C-c> :r !cat ~/.config/nvim/boiler_c.c<CR>3-vg_<C-g>
