@@ -19,10 +19,9 @@ Plug 'scrooloose/NERDTree'
 Plug 'sheerun/vim-polyglot'
 Plug 'hail2u/vim-css3-syntax'
 
-" lang specific
+" language specific
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
-Plug 'mattn/emmet-vim'
 
 " colorschemes
 Plug 'ajh17/spacegray.vim'
@@ -33,6 +32,7 @@ Plug 'dracula/vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/everforest'
+Plug 'sainnhe/sonokai'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'ghifarit53/tokyonight-vim'
 
@@ -82,12 +82,6 @@ set noswapfile
 set nobackup
 set nowritebackup
 
-" restore cursor position when opening a file
-autocmd BufReadPost *
-			\ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
-			\ |   exe "normal! g`\""
-			\ | endif
-
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 let g:python_highlight_all = 1
@@ -128,12 +122,6 @@ set inccommand=split
 set laststatus=0 ruler
 
 colorscheme tokyonight
-
-" emmet settings
-let g:user_emmet_install_global = 0
-let g:user_emmet_leader_key='<C-Z>'
-
-autocmd FileType html,css EmmetInstall
 
 " no bg for current line number
 " highlight CursorLineNr guibg=none
