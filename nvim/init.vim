@@ -1,9 +1,10 @@
-" ████████╗██╗░░██╗███████╗████████╗███████╗░█████╗░░█████╗░██╗░░██╗██████╗░
-" ╚══██╔══╝██║░░██║██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██║░░██║██╔══██╗
-" ░░░██║░░░███████║█████╗░░░░░██║░░░█████╗░░███████║██║░░╚═╝███████║██████╔╝
-" ░░░██║░░░██╔══██║██╔══╝░░░░░██║░░░██╔══╝░░██╔══██║██║░░██╗██╔══██║██╔══██╗
-" ░░░██║░░░██║░░██║███████╗░░░██║░░░███████╗██║░░██║╚█████╔╝██║░░██║██║░░██║
-" ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝
+
+ " ████████╗██╗░░██╗███████╗████████╗███████╗░█████╗░░█████╗░██╗░░██╗██████╗░
+ " ╚══██╔══╝██║░░██║██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██║░░██║██╔══██╗
+ " ░░░██║░░░███████║█████╗░░░░░██║░░░█████╗░░███████║██║░░╚═╝███████║██████╔╝
+ " ░░░██║░░░██╔══██║██╔══╝░░░░░██║░░░██╔══╝░░██╔══██║██║░░██╗██╔══██║██╔══██╗
+ " ░░░██║░░░██║░░██║███████╗░░░██║░░░███████╗██║░░██║╚█████╔╝██║░░██║██║░░██║
+ " ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝
 
 " PLUGINS
 
@@ -11,25 +12,24 @@ call plug#begin()
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/NERDTree'
 
 " syntax
-Plug 'sheerun/vim-polyglot'
-Plug 'hail2u/vim-css3-syntax'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 
 " language specific
-Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
 
 " colorschemes
 Plug 'ajh17/spacegray.vim'
 Plug 'joshdick/onedark.vim'
-Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'ayu-theme/ayu-vim'
 Plug 'dracula/vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/everforest'
+Plug 'sainnhe/edge'
 Plug 'sainnhe/sonokai'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'ghifarit53/tokyonight-vim'
@@ -126,6 +126,8 @@ augroup TERMINAL
 augroup END
 
 " COLORS & HIGHLIGHTS
+
+lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 colorscheme tokyonight
 
