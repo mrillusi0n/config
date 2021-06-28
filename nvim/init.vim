@@ -22,7 +22,6 @@ Plug 'rust-lang/rust.vim'
 
 " colorschemes
 Plug 'ajh17/spacegray.vim'
-Plug 'joshdick/onedark.vim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'ayu-theme/ayu-vim'
 Plug 'dracula/vim'
@@ -31,7 +30,6 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/everforest'
 Plug 'sainnhe/edge'
 Plug 'sainnhe/sonokai'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'ghifarit53/tokyonight-vim'
 
 call plug#end()
@@ -68,7 +66,7 @@ syntax on
 let g:everforest_background = 'hard'
 
 " ayu
-let ayucolor="mirage"
+let ayucolor="dark"
 
 " python syntax
 let g:python_highlight_all = 1
@@ -125,6 +123,13 @@ augroup TERMINAL
 	autocmd BufWinEnter,WinEnter term://* startinsert
 augroup END
 
+augroup TRANSPARENCY
+	autocmd ColorScheme * highlight Normal ctermbg=none guibg=none
+	autocmd ColorScheme * highlight CursorLineNr ctermbg=none guibg=none
+	autocmd ColorScheme * highlight EndOfBuffer ctermbg=none guibg=none
+	autocmd ColorScheme * highlight LineNr ctermbg=none guibg=none
+augroup END
+
 " COLORS & HIGHLIGHTS
 
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
@@ -135,6 +140,4 @@ colorscheme tokyonight
 highlight Normal ctermbg=none guibg=none
 highlight CursorLineNr ctermbg=none guibg=none
 highlight EndOfBuffer ctermbg=none guibg=none
-
-" no bg for current line number
-" highlight CursorLineNr guibg=none
+highlight LineNr ctermbg=none guibg=none
