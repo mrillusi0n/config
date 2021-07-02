@@ -132,7 +132,7 @@ augroup END
 
 " COLORS & HIGHLIGHTS
 
-lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+lua require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 colorscheme tokyonight
 
