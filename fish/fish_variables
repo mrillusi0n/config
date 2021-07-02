@@ -8,7 +8,7 @@ SETUVAR _fish_abbr_n:nvim
 SETUVAR _fish_abbr_py:bpython\x20\x2dq
 SETUVAR _fish_abbr_pyt:python3
 SETUVAR _fish_abbr_tc:cd\x20/Volumes/development/theteachr
-SETUVAR _fish_abbr_tree:tree\x20\x2dCL\x202
+SETUVAR _fish_abbr_tree:tree\x20\x2d\x2ddirsfirst\x20\x2dCL\x202
 SETUVAR fish_color_autosuggestion:7c8377
 SETUVAR fish_color_cancel:normal
 SETUVAR fish_color_command:bryellow
