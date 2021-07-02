@@ -157,14 +157,7 @@ onoremap inb :<C-u>normal! f(vib<Cr>
 
 let s:scheme_index = 0
 
-function! NextColorScheme()
-	echo "Switching Colors"
-	let s:schemes = getcompletion('', 'color')
-	execute "colorscheme" s:schemes[s:scheme_index]
-	let s:scheme_index = (s:scheme_index + 1) % len(s:schemes)
-endfunction
-
-nnoremap <leader>cc :call NextColorScheme()<CR>
+lua require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 " normal escape in terminal
 tnoremap <Esc> <C-\><C-n>
