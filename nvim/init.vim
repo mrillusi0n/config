@@ -1,4 +1,3 @@
-
 " ████████╗██╗░░██╗███████╗████████╗███████╗░█████╗░░█████╗░██╗░░██╗██████╗░
 " ╚══██╔══╝██║░░██║██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██║░░██║██╔══██╗
 " ░░░██║░░░███████║█████╗░░░░░██║░░░█████╗░░███████║██║░░╚═╝███████║██████╔╝
@@ -17,20 +16,23 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/NERDTree'
 Plug 'preservim/nerdcommenter'
 
-" lang specific
-Plug 'vim-python/python-syntax'
+" syntax
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+
+" language specific
 Plug 'rust-lang/rust.vim'
 
 " colorschemes
 Plug 'ajh17/spacegray.vim'
-Plug 'joshdick/onedark.vim'
-Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'ayu-theme/ayu-vim'
 Plug 'dracula/vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/everforest'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'sainnhe/edge'
+Plug 'sainnhe/sonokai'
 Plug 'ghifarit53/tokyonight-vim'
 
 call plug#end()
