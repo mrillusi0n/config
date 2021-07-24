@@ -13,6 +13,7 @@ alias ...='cd ../..'
 # commands
 alias bp="bpython -q"
 alias py="python3.8"
+alias n="nvim"
 
 # setting prompt
 PROMPT="%(?.%F{blue}.%F{red})$%f "
