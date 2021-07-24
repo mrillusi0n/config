@@ -5,15 +5,12 @@
 " ░░░██║░░░██║░░██║███████╗░░░██║░░░███████╗██║░░██║╚█████╔╝██║░░██║██║░░██║
 " ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝
 
-
-
 " initialize plugins
 call plug#begin()
 
 " quality of life
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/NERDTree'
 Plug 'preservim/nerdcommenter'
 
 " syntax
@@ -64,13 +61,6 @@ set nowritebackup
 filetype plugin indent on
 syntax on
 
-
-" everforest
-let g:everforest_background = 'hard'
-
-" ayu
-let ayucolor="mirage"
-
 " rust
 let g:rustfmt_autosave = 1
 let g:rust_clip_command = 'pbcopy'
@@ -102,6 +92,12 @@ vnoremap ae :<C-U>silent! normal! ggVG<CR>
 
 " plugin specific mappings
 map <silent> <C-n> :NERDTreeToggle<CR>
+
+" everforest
+let g:everforest_background = 'hard'
+
+" ayu
+let ayucolor = "mirage"
 
 colorscheme everforest
 
