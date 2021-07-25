@@ -97,7 +97,11 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 let g:everforest_background = 'hard'
 
 " ayu
-let ayucolor = "mirage"
+let ayucolor = 'mirage'
+
+" sonokai
+" Available values: 'default', 'atlantis', 'andromeda', 'shusia', 'maia', 'espresso'
+let g:sonokai_style = 'espresso'
 
 colorscheme gruvbox-material
 
