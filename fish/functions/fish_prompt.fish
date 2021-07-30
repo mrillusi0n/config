@@ -9,7 +9,7 @@ function fish_prompt
 end
 
 function fish_right_prompt
-	set_color cyan
+	set_color brmagenta
     basename (prompt_pwd)
     set_color normal
 end
