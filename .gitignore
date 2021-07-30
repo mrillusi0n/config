@@ -1,4 +1,7 @@
 .DS_Store
 
-# n?vim
+# nvim
 plugged/
+
+# object files
+*.o
