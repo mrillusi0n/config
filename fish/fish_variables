@@ -4,6 +4,7 @@ SETUVAR EDITOR:nvim
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_dev:cd\x20/Volumes/development
 SETUVAR _fish_abbr_lp:cd\x20/Volumes/development/learn\x2dprogramming
+SETUVAR _fish_abbr_n:nvim
 SETUVAR _fish_abbr_py:bpython\x20\x2dq
 SETUVAR _fish_abbr_pyt:python3
 SETUVAR _fish_abbr_tc:cd\x20/Volumes/development/theteachr
