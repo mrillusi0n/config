@@ -11,11 +11,6 @@ call plug#begin()
 " quality of life
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'preservim/nerdcommenter'
-
-" syntax
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
 
 " language specific
 Plug 'rust-lang/rust.vim'
@@ -105,11 +100,6 @@ colorscheme everforest
 highlight Normal ctermbg=none guibg=none
 highlight CursorLineNr ctermbg=none guibg=none
 highlight EndOfBuffer ctermbg=none guibg=none
-
-" ignore TS Errors
-highlight link TSError Normal
-
-lua require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 " normal escape in terminal
 tnoremap <Esc> <C-\><C-n>
