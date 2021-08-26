@@ -127,6 +127,3 @@ augroup Terminal
 	autocmd!
 	autocmd BufWinEnter,WinEnter term://* startinsert
 augroup END
-
-autocmd InsertEnter * :set norelativenumber
-autocmd InsertLeave * :set relativenumber
