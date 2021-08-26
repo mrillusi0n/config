@@ -42,7 +42,6 @@ set shiftwidth=4
 set smarttab
 set noexpandtab
 set nohlsearch
-set number
 set autoindent
 set autoread
 set hidden
