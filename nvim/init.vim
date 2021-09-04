@@ -90,6 +90,11 @@ vnoremap ae :<C-U>silent! normal! ggVG<CR>
 
 " everforest
 let g:everforest_background = 'hard'
+let g:gruvbox_material_disable_italic_comment = 1
+
+" gruvbox
+let g:gruvbox_background = 'hard'
+let g:gruvbox_material_disable_italic_comment = 1
 
 " ayu ['mirage','dark']
 let ayucolor = 'mirage'
