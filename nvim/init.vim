@@ -65,7 +65,6 @@ filetype plugin indent on
 syntax on
 
 " rust
-let g:rustfmt_autosave = 1
 let g:rust_clip_command = 'pbcopy'
 
 nnoremap <silent> <leader>s :set hlsearch!<CR>
