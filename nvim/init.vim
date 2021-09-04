@@ -59,6 +59,7 @@ set scrolloff=2
 set noswapfile
 set nobackup
 set nowritebackup
+set listchars=tab:»\ ,space:·
 
 filetype plugin indent on
 syntax on
@@ -88,13 +89,22 @@ map Y y$
 
 map <Space> :
 
+" telecope bindings
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" show list
+nnoremap <silent> <F5> :set list!<CR>
+
 " custom text object: `e` for everyting
 omap ae :<C-U>silent! normal! ggVG<CR>
 vnoremap ae :<C-U>silent! normal! ggVG<CR>
 
 " everforest
 let g:everforest_background = 'hard'
-let g:gruvbox_material_disable_italic_comment = 1
+let g:everforest_disable_italic_comment = 1
 
 " gruvbox
 let g:gruvbox_background = 'hard'
