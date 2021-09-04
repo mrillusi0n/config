@@ -19,6 +19,10 @@ Plug 'nvim-treesitter/playground'
 " language specific
 Plug 'rust-lang/rust.vim'
 
+" telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 " colorschemes
 Plug 'ajh17/spacegray.vim'
 Plug 'sainnhe/gruvbox-material'
