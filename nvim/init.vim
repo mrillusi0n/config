@@ -11,7 +11,6 @@ call plug#begin()
 " quality of life
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'preservim/nerdcommenter'
 
 " syntax
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -88,9 +87,6 @@ map <Space> :
 " custom text object: `e` for everyting
 omap ae :<C-U>silent! normal! ggVG<CR>
 vnoremap ae :<C-U>silent! normal! ggVG<CR>
-
-" plugin specific mappings
-map <silent> <C-n> :NERDTreeToggle<CR>
 
 " everforest
 let g:everforest_background = 'hard'
