@@ -59,7 +59,7 @@ set scrolloff=2
 set noswapfile
 set nobackup
 set nowritebackup
-set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set listchars=tab:→\ ,eol:¬,space:·,trail:•,extends:⟩,precedes:⟨
 
 filetype plugin indent on
 syntax on
