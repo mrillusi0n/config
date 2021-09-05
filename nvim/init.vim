@@ -109,13 +109,14 @@ let g:everforest_disable_italic_comment = 1
 let g:gruvbox_background = 'hard'
 let g:gruvbox_material_disable_italic_comment = 1
 
-" ayu ['mirage','dark']
+" ayu ['mirage'|'dark']
 let ayucolor = 'mirage'
 
-" sonokai ['default','atlantis','andromeda','shusia','maia','espresso']
+" sonokai ['default'|'atlantis'|'andromeda'|'shusia'|'maia'|'espresso']
 let g:sonokai_style = 'espresso'
+let g:sonokai_disable_italic_comment = 1
 
-colorscheme gruvbox-material
+colorscheme sonokai
 
 " transparency
 highlight Normal ctermbg=none guibg=none
