@@ -111,7 +111,7 @@ let g:gruvbox_background = 'hard'
 let g:gruvbox_material_disable_italic_comment = 1
 
 " ayu ['mirage'|'dark']
-let ayucolor = 'mirage'
+let ayucolor = 'dark'
 
 " sonokai ['default'|'atlantis'|'andromeda'|'shusia'|'maia'|'espresso']
 let g:sonokai_style = 'espresso'
