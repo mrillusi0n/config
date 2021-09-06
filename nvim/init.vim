@@ -42,7 +42,9 @@ set incsearch
 set ruler
 set tabstop=4
 set shiftwidth=4
+set smartcase
 set smarttab
+set ignorecase
 set noexpandtab
 set nohlsearch
 set autoindent
