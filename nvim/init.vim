@@ -55,7 +55,6 @@ set inccommand=split
 set laststatus=0
 set splitright
 set splitbelow
-set scrolloff=2
 set noswapfile
 set nobackup
 set nowritebackup
