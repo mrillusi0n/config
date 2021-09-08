@@ -96,7 +96,7 @@ nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader>h <cmd>Telescope help_tags<cr>
 
 " show list
-nnoremap <silent> <F5> :set list!<CR>
+nnoremap <silent> <Esc> :set list!<CR>
 
 " custom text object: `e` for everyting
 omap ae :<C-U>silent! normal! ggVG<CR>
@@ -117,7 +117,7 @@ let ayucolor = 'dark'
 let g:sonokai_style = 'espresso'
 let g:sonokai_disable_italic_comment = 1
 
-colorscheme sonokai
+colorscheme gruvbox-material
 
 " transparency
 highlight Normal ctermbg=none guibg=none
