@@ -5,7 +5,8 @@
 " ░░░██║░░░██║░░██║███████╗░░░██║░░░███████╗██║░░██║╚█████╔╝██║░░██║██║░░██║
 " ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝
 
-" initialize plugins
+" plugins {{{
+
 call plug#begin()
 
 " quality of life
@@ -37,6 +38,10 @@ Plug 'ghifarit53/tokyonight-vim'
 
 call plug#end()
 
+" }}}
+
+" set options {{{
+
 set showcmd
 set incsearch
 set ruler
@@ -62,11 +67,16 @@ set nobackup
 set nowritebackup
 set listchars=tab:→\ ,eol:¬,space:·,trail:•,extends:⟩,precedes:⟨
 
-filetype plugin indent on
-syntax on
+" }}}
 
-" rust
-let g:rust_clip_command = 'pbcopy'
+" filetype settings {{{
+
+filetype plugin on
+filetype indent on
+
+" }}}
+
+" keymaps {{{
 
 nnoremap <silent> <leader>s :set hlsearch!<CR>
 nnoremap <silent> <leader>n :set relativenumber!<CR>
@@ -98,9 +108,19 @@ nnoremap <leader>h <cmd>Telescope help_tags<cr>
 " show list
 nnoremap <silent> <Esc> :set list!<CR>
 
-" custom text object: `e` for everyting
+" normal escape in terminal
+tnoremap <Esc> <C-\><C-n>
+
+" }}}
+
+" custom text objects {{{
+
 omap ae :<C-U>silent! normal! ggVG<CR>
 vnoremap ae :<C-U>silent! normal! ggVG<CR>
+
+" }}}
+
+" colorscheme settings {{{
 
 " everforest
 let g:everforest_background = 'hard'
@@ -119,18 +139,26 @@ let g:sonokai_disable_italic_comment = 1
 
 colorscheme gruvbox-material
 
-" transparency
+" }}}
+
+" transparency {{{
+
 highlight Normal ctermbg=none guibg=none
 highlight CursorLineNr ctermbg=none guibg=none
 highlight EndOfBuffer ctermbg=none guibg=none
 
-" ignore TS Errors
-highlight link TSError Normal
+" }}}
+
+" treesitter settings {{{
 
 lua require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
-" normal escape in terminal
-tnoremap <Esc> <C-\><C-n>
+" ignore TS Errors
+highlight link TSError Normal
+
+" }}}
+
+" auto commands {{{
 
 augroup CSNIPPET
 	autocmd!
@@ -141,3 +169,8 @@ augroup Terminal
 	autocmd!
 	autocmd BufWinEnter,WinEnter term://* startinsert
 augroup END
+
+" }}}
+
+" vim:fileencoding=utf-8:foldmethod=marker
+
