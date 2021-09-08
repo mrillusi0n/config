@@ -5,7 +5,7 @@
 " ░░░██║░░░██║░░██║███████╗░░░██║░░░███████╗██║░░██║╚█████╔╝██║░░██║██║░░██║
 " ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝
 
-" plugins {{{
+" Plugins {{{
 
 call plug#begin()
 
@@ -40,7 +40,7 @@ call plug#end()
 
 " }}}
 
-" set options {{{
+" Options {{{
 
 set showcmd
 set incsearch
@@ -69,14 +69,14 @@ set listchars=tab:→\ ,eol:¬,space:·,trail:•,extends:⟩,precedes:⟨
 
 " }}}
 
-" filetype settings {{{
+" Filetype Settings {{{
 
 filetype plugin on
 filetype indent on
 
 " }}}
 
-" keymaps {{{
+" Keymaps {{{
 
 nnoremap <silent> <leader>s :set hlsearch!<CR>
 nnoremap <silent> <leader>n :set relativenumber!<CR>
@@ -113,14 +113,14 @@ tnoremap <Esc> <C-\><C-n>
 
 " }}}
 
-" custom text objects {{{
+" Custom Text Objects {{{
 
 omap ae :<C-U>silent! normal! ggVG<CR>
 vnoremap ae :<C-U>silent! normal! ggVG<CR>
 
 " }}}
 
-" colorscheme settings {{{
+" Colorscheme Settings {{{
 
 " everforest
 let g:everforest_background = 'hard'
@@ -141,7 +141,7 @@ colorscheme gruvbox-material
 
 " }}}
 
-" transparency {{{
+" Transparency {{{
 
 highlight Normal ctermbg=none guibg=none
 highlight CursorLineNr ctermbg=none guibg=none
@@ -149,7 +149,7 @@ highlight EndOfBuffer ctermbg=none guibg=none
 
 " }}}
 
-" treesitter settings {{{
+" Treesitter Settings {{{
 
 lua require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
@@ -158,7 +158,7 @@ highlight link TSError Normal
 
 " }}}
 
-" auto commands {{{
+" Auto Commands {{{
 
 augroup CSNIPPET
 	autocmd!
