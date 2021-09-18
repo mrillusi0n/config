@@ -54,7 +54,7 @@ set smarttab
 set ignorecase
 set noexpandtab
 set nohlsearch
-set autoindent
+set smartindent
 set autoread
 set hidden
 set nowrap
