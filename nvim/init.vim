@@ -28,15 +28,15 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " colorschemes
 Plug 'ajh17/spacegray.vim'
-Plug 'sainnhe/gruvbox-material'
+Plug 'arcticicestudio/nord-vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'dracula/vim'
-Plug 'nanotech/jellybeans.vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'sainnhe/everforest'
-Plug 'sainnhe/edge'
-Plug 'sainnhe/sonokai'
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'sainnhe/edge'
+Plug 'sainnhe/everforest'
+Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/sonokai'
 
 call plug#end()
 
