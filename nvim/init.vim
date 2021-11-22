@@ -44,6 +44,7 @@ call plug#end()
 " Options {{{
 
 set showcmd
+set cursorline
 set incsearch
 set ruler
 set tabstop=4
