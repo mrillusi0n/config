@@ -30,6 +30,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'ajh17/spacegray.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'sainnhe/everforest'
@@ -56,6 +57,7 @@ set smartindent
 set autoread
 set hidden
 set nowrap
+set relativenumber
 set shortmess+=IFT
 set termguicolors
 set inccommand=split
@@ -134,7 +136,7 @@ let g:gruvbox_material_disable_italic_comment = 1
 let ayucolor = 'dark'
 
 " sonokai ['default'|'atlantis'|'andromeda'|'shusia'|'maia'|'espresso']
-let g:sonokai_style = 'espresso'
+let g:sonokai_style = 'maia'
 let g:sonokai_disable_italic_comment = 1
 
 colorscheme gruvbox-material
