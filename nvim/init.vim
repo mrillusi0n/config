@@ -41,6 +41,15 @@ call plug#end()
 
 " }}}
 
+" Treesitter Settings {{{
+
+lua require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+
+" ignore TS Errors
+highlight link TSError Normal
+
+" }}}
+
 " Options {{{
 
 set showcmd
@@ -140,7 +149,7 @@ let ayucolor = 'dark'
 let g:sonokai_style = 'maia'
 let g:sonokai_disable_italic_comment = 1
 
-colorscheme gruvbox-material
+colorscheme nightfly
 
 " }}}
 
@@ -149,15 +158,6 @@ colorscheme gruvbox-material
 highlight Normal ctermbg=none guibg=none
 highlight CursorLineNr ctermbg=none guibg=none
 highlight EndOfBuffer ctermbg=none guibg=none
-
-" }}}
-
-" Treesitter Settings {{{
-
-lua require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
-
-" ignore TS Errors
-highlight link TSError Normal
 
 " }}}
 
