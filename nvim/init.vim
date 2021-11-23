@@ -156,7 +156,6 @@ colorscheme nightfly
 " Transparency {{{
 
 highlight Normal ctermbg=none guibg=none
-highlight CursorLineNr ctermbg=none guibg=none
 highlight EndOfBuffer ctermbg=none guibg=none
 
 " }}}
