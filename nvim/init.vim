@@ -1,12 +1,3 @@
-"
-" ████████╗██╗░░██╗███████╗████████╗███████╗░█████╗░░█████╗░██╗░░██╗██████╗░
-" ╚══██╔══╝██║░░██║██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██║░░██║██╔══██╗
-" ░░░██║░░░███████║█████╗░░░░░██║░░░█████╗░░███████║██║░░╚═╝███████║██████╔╝
-" ░░░██║░░░██╔══██║██╔══╝░░░░░██║░░░██╔══╝░░██╔══██║██║░░██╗██╔══██║██╔══██╗
-" ░░░██║░░░██║░░██║███████╗░░░██║░░░███████╗██║░░██║╚█████╔╝██║░░██║██║░░██║
-" ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝
-"
-
 " Plugins {{{
 
 call plug#begin()
@@ -146,16 +137,16 @@ let g:gruvbox_material_disable_italic_comment = 1
 let ayucolor = 'dark'
 
 " sonokai ['default'|'atlantis'|'andromeda'|'shusia'|'maia'|'espresso']
-let g:sonokai_style = 'maia'
+let g:sonokai_style = 'atlantis'
 let g:sonokai_disable_italic_comment = 1
 
-colorscheme nightfly
+colorscheme sonokai
 
 " }}}
 
 " Transparency {{{
 
-highlight Normal ctermbg=none guibg=none
+"highlight Normal ctermbg=none guibg=none
 highlight EndOfBuffer ctermbg=none guibg=none
 
 " }}}
