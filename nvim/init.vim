@@ -44,7 +44,7 @@ highlight link TSError Normal
 " Options {{{
 
 set showcmd
-set cursorline
+set cursorline cursorlineopt=number
 set incsearch
 set ruler
 set tabstop=4
@@ -137,7 +137,7 @@ let ayucolor = 'dark'
 " sonokai ['default'|'atlantis'|'andromeda'|'shusia'|'maia'|'espresso']
 let g:sonokai_style = 'atlantis'
 
-colorscheme sonokai
+colorscheme nightfly
 
 " }}}
 
