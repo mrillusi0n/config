@@ -127,18 +127,15 @@ vnoremap ae :<C-U>silent! normal! ggVG<CR>
 
 " everforest
 let g:everforest_background = 'hard'
-let g:everforest_disable_italic_comment = 1
 
 " gruvbox
 let g:gruvbox_background = 'hard'
-let g:gruvbox_material_disable_italic_comment = 1
 
 " ayu ['mirage'|'dark']
 let ayucolor = 'dark'
 
 " sonokai ['default'|'atlantis'|'andromeda'|'shusia'|'maia'|'espresso']
 let g:sonokai_style = 'atlantis'
-let g:sonokai_disable_italic_comment = 1
 
 colorscheme sonokai
 
