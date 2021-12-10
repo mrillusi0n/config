@@ -131,10 +131,10 @@ let g:everforest_background = 'hard'
 " gruvbox
 let g:gruvbox_background = 'hard'
 
-" ayu ['mirage'|'dark']
+" ayu [mirage|dark|light]
 let ayucolor = 'dark'
 
-" sonokai ['default'|'atlantis'|'andromeda'|'shusia'|'maia'|'espresso']
+" sonokai [default|atlantis|andromeda|shusia|maia|espresso]
 let g:sonokai_style = 'atlantis'
 
 colorscheme nightfly
