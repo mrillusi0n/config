@@ -27,6 +27,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'sainnhe/everforest'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/sonokai'
+Plug 'EdenEast/nightfox.nvim'
 
 call plug#end()
 
@@ -137,7 +138,7 @@ let ayucolor = 'dark'
 " sonokai [default|atlantis|andromeda|shusia|maia|espresso]
 let g:sonokai_style = 'atlantis'
 
-colorscheme nightfly
+colorscheme nordfox
 
 " }}}
 
