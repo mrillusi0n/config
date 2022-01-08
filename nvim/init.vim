@@ -1,3 +1,6 @@
+" init.vim
+" Author: @theteachr
+
 " Plugins {{{
 
 call plug#begin()
